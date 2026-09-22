@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/unicourt/main/json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json",
+  "title": "GetCasecountanalyticsbynormattorneyResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasecountanalyticsbynormattorneyResponse",
+  "type": "object",
+  "properties": {
+    "object": {
+      "type": "string",
+      "description": "Response object type"
+    },
+    "results": {
+      "type": "array",
+      "description": "List of attorney analytics"
+    },
+    "normAttorneyId": {
+      "type": "string",
+      "description": "Normalized attorney identifier"
+    },
+    "normAttorneyName": {
+      "type": "string",
+      "description": "Attorney name"
+    },
+    "caseSearchAPI": {
+      "type": "string",
+      "description": "API URL to search cases for this attorney"
+    },
+    "caseCount": {
+      "type": "integer",
+      "description": "Number of cases"
+    },
+    "nextPageAPI": {
+      "type": "string",
+      "description": "URL for next page"
+    },
+    "previousPageAPI": {
+      "type": "string",
+      "description": "URL for previous page"
+    },
+    "totalPages": {
+      "type": "integer",
+      "description": "Total number of pages"
+    },
+    "totalCaseCount": {
+      "type": "integer",
+      "description": "Total case count across all results"
+    },
+    "totalNormAttorneyCount": {
+      "type": "integer",
+      "description": "Total number of distinct attorneys"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/unicourt-openapi-generated.yml
+vocabulary:
+  name: UniCourt Domain Vocabulary
+  description: 'Terms declared by UniCourt''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-22'
+  terms:
+  - term: GetCaseCaseak44001593745AResponse
+    definition: 'Object declared by the contract with fields: object, caseId, url, caseNumber, caseName, filedDate, hasOnlyMetaInfo, courtServiceStatusId,
+      courtServiceStatusAPI, court, courtLocation, caseType. (14 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCaseak44001593745AResponse
+  - term: GetCaseCasearb6D8C898B0BaResponse
+    definition: 'Object declared by the contract with fields: object, caseId, url, caseNumber, caseName, filedDate, court, courtLocation, caseType,
+      caseStatus, attorneys, judges. (1 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCasearb6D8C898B0BaResponse
+  - term: GetCaseCasearf7613462Fa75AttorneysResponse
+    definition: 'Object declared by the contract with fields: object, pageNumber, totalCount, totalPages, nextPageAPI, attorneyArray.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCasearf7613462Fa75AttorneysResponse
+  - term: GetCaseCasearf7613462Fa75HearingsResponse
+    definition: 'Object declared by the contract with fields: hearingArray, object, pageNumber, totalCount, totalPages, nextPageAPI.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCasearf7613462Fa75HearingsResponse
+  - term: GetCaseCasejr6533D15Dc165Response
+    definition: 'Object declared by the contract with fields: object, caseId, url, caseNumber, caseName, filedDate, hasOnlyMetaInfo.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCasejr6533D15Dc165Response
+  - term: GetCasecountanalyticsbycasetypeResponse
+    definition: 'Object declared by the contract with fields: object, nextPageAPI, previousPageAPI, results, caseCount, caseSearchAPI, caseType,
+      caseType.object, caseType.caseClassId, caseType.areaOfLawId, caseType.caseTypeGroupId, caseType.caseTypeId. (7 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasecountanalyticsbycasetypeResponse
+  - term: GetCasecountanalyticsbynormattorneyResponse
+    definition: 'Object declared by the contract with fields: object, results, normAttorneyId, normAttorneyName, caseSearchAPI, caseCount, nextPageAPI,
+      previousPageAPI, totalPages, totalCaseCount, totalNormAttorneyCount.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasecountanalyticsbynormattorneyResponse
+  - term: GetCasecountanalyticsbynormlawfirmResponse
+    definition: 'Object declared by the contract with fields: object, nextPageAPI, previousPageAPI, results, totalPages, totalCaseCount, totalCaseTypeCount.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasecountanalyticsbynormlawfirmResponse
+  - term: GetCasedocumentorderResponse
+    definition: 'Object declared by the contract with fields: object, caseDocumentOrderCallbackId, caseDocumentId, callbackGeneratedDate, status,
+      caseDocument, caseDocumentOrderCallbackAPI, file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasedocumentorderResponse
+  - term: GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response
+    definition: 'Object declared by the contract with fields: object, caseDocumentOrderCallbackId, caseDocumentId, callbackGeneratedDate, status,
+      caseDocument, caseDocumentOrderCallbackAPI, file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response
+  - term: GetCasedocumentorderCallbacksCbdobnu64101C97E33Response
+    definition: 'Object declared by the contract with fields: object, caseDocumentOrderCallbackId, caseDocumentId, callbackGeneratedDate, status,
+      caseDocument, caseDocumentOrderCallbackAPI, file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasedocumentorderCallbacksCbdobnu64101C97E33Response
+  - term: GetCaseexportCasegpea09E0763Db3Response
+    definition: 'Object declared by the contract with fields: object, caseExportCallbackId, caseId, callbackGeneratedDate, status, caseExportCallbackAPI,
+      file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseexportCasegpea09E0763Db3Response
+  - term: GetCaseexportCasepkca0Efb77DfacResponse
+    definition: 'Object declared by the contract with fields: object, caseExportCallbackId, caseId, callbackGeneratedDate, status, caseExportCallbackAPI,
+      file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseexportCasepkca0Efb77DfacResponse
+  - term: GetCaseexportCallbacksCbce3Sh766729F6024Response
+    definition: 'Object declared by the contract with fields: object, caseExportCallbackId, caseId, callbackGeneratedDate, status, caseExportCallbackAPI,
+      file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseexportCallbacksCbce3Sh766729F6024Response
+  - term: GetCaseexportCallbacksCbcervh6672B1Cez23Response
+    definition: 'Object declared by the contract with fields: object, caseExportCallbackId, caseId, callbackGeneratedDate, status, caseExportCallbackAPI,
+      file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseexportCallbacksCbcervh6672B1Cez23Response
+  - term: PutCaseimportRequest
+    definition: 'Object declared by the contract with fields: caseNumber, priorityLevel, notifyOnDelay, courtId.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutCaseimportRequest
+  - term: PutCaseimportResponse
+    definition: 'Object declared by the contract with fields: caseImportCallbackId, status, statusDetails.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutCaseimportResponse
+  - term: GetCaseimportCallbacksResponse
+    definition: 'Object declared by the contract with fields: pagination, callbackArray.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseimportCallbacksResponse
+  - term: GetCaseimportCallbacksCaseimportcallbackidResponse
+    definition: 'Object declared by the contract with fields: caseImportCallbackId, status, statusDetails, importedCaseReferences, case.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseimportCallbacksCaseimportcallbackidResponse
+  - term: GetCasesearchResponse
+    definition: 'Object declared by the contract with fields: object, caseId, caseName, filedDate.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCasesearchResponse
+  - term: PutCaseupdateRequest
+    definition: 'Object declared by the contract with fields: caseId, priorityLevel, notifyOnDelay.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutCaseupdateRequest
+  - term: PutCaseupdateResponse
+    definition: 'Object declared by the contract with fields: caseUpdateId, status, statusDetails.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutCaseupdateResponse
+  - term: GetCaseupdateCaseke15Dba3978Da9Response
+    definition: 'Object declared by the contract with fields: object, caseId, status, requestedDate, caseAPI, pacerOptions, exception, case.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseupdateCaseke15Dba3978Da9Response
+  - term: GetCaseupdateCasene32920DcecabeResponse
+    definition: 'Object declared by the contract with fields: object, caseId, status, requestedDate, caseAPI, pacerOptions, exception, case.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseupdateCasene32920DcecabeResponse
+  - term: GetCaseupdateCaseidResponse
+    definition: 'Object declared by the contract with fields: caseId, status, statusDetails, caseObject.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseupdateCaseidResponse
+  - term: GetMasterdataCourtResponse
+    definition: 'Object declared by the contract with fields: object, courtArray, nextPageAPI, previousPageAPI, pageNumber, totalPages, totalCount.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetMasterdataCourtResponse
+  - term: GetNormattorneyNatyzny8Exmoe2RwgjResponse
+    definition: 'Object declared by the contract with fields: object, normAttorneyId, normAttorneyName, confidenceScore, scoreConstituents, associatedNormJudgesAPI,
+      associatedNormPartiesAPI, associatedNormLawFirmsAPI, caseCountAnalyticsByNormAttorneyAPI, caseCountAnalyticsByOpposingNormAttorneyAPI.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyNatyzny8Exmoe2RwgjResponse
+  - term: GetNormattorneyNatyppnmw8Ayt8QvjtResponse
+    definition: 'Object declared by the contract with fields: object, normAttorneyId, name, firstName, middleName, lastName, caseSearchAPI, caseAnalyticsAPI,
+      hasAssociatedPublicData, barRecordArray.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyNatyppnmw8Ayt8QvjtResponse
+  - term: GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin
+    definition: 'Object declared by the contract with fields: object, results, normAttorneyId, normAttorneyName, caseSearchAPI, caseCount, nextPageAPI,
+      previousPageAPI, totalPages, totalCaseCount, totalNormAttorneyCount.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin
+  - term: PutNormattorneytrackRequest
+    definition: 'Object declared by the contract with fields: normAttorneyId, stateCodeArray, scheduleOptions, scheduleOptions.refreshWindow,
+      scheduleOptions.startDate, scheduleOptions.endDate, notifyOnDelay.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormattorneytrackRequest
+  - term: PutNormattorneytrackResponse
+    definition: 'Object declared by the contract with fields: NormAttorneyResponse.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormattorneytrackResponse
+  - term: DeleteNormattorneytrackNormattorneyidResponse
+    definition: 'Object declared by the contract with fields: DeleteResponse.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/DeleteNormattorneytrackNormattorneyidResponse
+  - term: GetNormattorneytrackNormattorneyidResponse
+    definition: 'Object declared by the contract with fields: NormAttorneyResponse.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneytrackNormattorneyidResponse
+  - term: GetNormattorneytracksResponse
+    definition: 'Object declared by the contract with fields: NormAttorneyListResponse.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneytracksResponse
+  - term: PutNormattorneyupdateRequest
+    definition: 'Object declared by the contract with fields: normAttorneyId, stateCodeArray, priorityLevel, notifyOnDelay.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormattorneyupdateRequest
+  - term: PutNormattorneyupdateResponse
+    definition: 'Object declared by the contract with fields: normAttorneyUpdateId, status, statusDetails.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormattorneyupdateResponse
+  - term: GetNormattorneyupdateNormattorneyidResponse
+    definition: 'Object declared by the contract with fields: normAttorneyUpdateId, status, statusDetails, normAttorney.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyupdateNormattorneyidResponse
+  - term: GetNormattorneyupdatesResponse
+    definition: 'Object declared by the contract with fields: updates, pageNumber, totalPages.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyupdatesResponse
+  - term: GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons
+    definition: 'Object declared by the contract with fields: associatedNormPartyArray.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons
+  - term: GetNormlawfirmsearchResponse
+    definition: 'Object declared by the contract with fields: object, normLawFirmSearchResultArray, q, normLawFirmSearchId, nextPageAPI, previousPageAPI,
+      pageNumber, totalPages, totalCount.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmsearchResponse
+  - term: PutNormlawfirmtrackRequest
+    definition: 'Object declared by the contract with fields: normLawFirmId, scheduleOptions, scheduleOptions.refreshWindow, scheduleOptions.startDate,
+      scheduleOptions.endDate, notifyOnDelay.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormlawfirmtrackRequest
+  - term: PutNormlawfirmtrackResponse
+    definition: 'Object declared by the contract with fields: NormLawFirmResponse.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormlawfirmtrackResponse
+  - term: DeleteNormlawfirmtrackNormlawfirmidResponse
+    definition: 'Object declared by the contract with fields: deleteResult.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/DeleteNormlawfirmtrackNormlawfirmidResponse
+  - term: GetNormlawfirmtrackNormlawfirmidResponse
+    definition: 'Object declared by the contract with fields: trackingDetails.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmtrackNormlawfirmidResponse
+  - term: GetNormlawfirmtracksResponse
+    definition: 'Object declared by the contract with fields: lawFirmList.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmtracksResponse
+  - term: PutNormlawfirmupdateRequest
+    definition: 'Object declared by the contract with fields: normLawFirmId, priorityLevel, notifyOnDelay.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormlawfirmupdateRequest
+  - term: PutNormlawfirmupdateResponse
+    definition: 'Object declared by the contract with fields: normLawFirmId, status, statusDetails.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormlawfirmupdateResponse
+  - term: GetNormlawfirmupdateNormlawfirmidResponse
+    definition: 'Object declared by the contract with fields: normLawFirmId, status, statusDetails, timestamps, normLawFirm.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmupdateNormlawfirmidResponse
+  - term: GetNormlawfirmupdatesResponse
+    definition: 'Object declared by the contract with fields: updates, pageNumber, totalPages.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormlawfirmupdatesResponse
+  - term: GetPacercaselocatorPartysearchCivilcourtsResponse
+    definition: 'Object declared by the contract with fields: object, pageNumber, pacerReceipt, pacerPageInfo, pacerSearchResultsArray.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetPacercaselocatorPartysearchCivilcourtsResponse
+  - term: PutPacercredentialRequest
+    definition: 'Object declared by the contract with fields: pacerUserId, pacerClientCode.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutPacercredentialRequest
+  - term: PutPacercredentialResponse
+    definition: 'Object declared by the contract with fields: object, caseDocumentOrderCallbackId, caseDocumentId, callbackGeneratedDate, status,
+      caseDocument, caseDocumentOrderCallbackAPI, file, exception.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutPacercredentialResponse

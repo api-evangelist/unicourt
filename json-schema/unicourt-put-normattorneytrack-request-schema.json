@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/unicourt/main/json-schema/unicourt-put-normattorneytrack-request-schema.json",
+  "title": "PutNormattorneytrackRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/PutNormattorneytrackRequest",
+  "type": "object",
+  "properties": {
+    "normAttorneyId": {
+      "type": "string",
+      "description": "Identifier of the attorney to track"
+    },
+    "stateCodeArray": {
+      "type": "array",
+      "description": "Required array of state codes indicating where the attorney is barred. Can be empty [] to consider all barred states."
+    },
+    "scheduleOptions": {
+      "type": "object",
+      "description": "Options for the tracking schedule"
+    },
+    "scheduleOptions.refreshWindow": {
+      "type": "string",
+      "description": "Frequency of tracking. Allowed values: 1W, 2W, 1M."
+    },
+    "scheduleOptions.startDate": {
+      "type": "string",
+      "description": "Optional start date (YYYY-MM-DD). Must be today or a future date."
+    },
+    "scheduleOptions.endDate": {
+      "type": "string",
+      "description": "Optional end date (YYYY-MM-DD) to stop tracking after this date."
+    },
+    "notifyOnDelay": {
+      "type": "boolean",
+      "description": "Ignored for Norm Attorney Track; always treated as false."
+    }
+  },
+  "required": [
+    "normAttorneyId"
+  ]
+}

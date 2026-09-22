@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/unicourt/main/json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json",
+  "title": "GetNormattorneyNatyppnmw8Ayt8QvjtResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetNormattorneyNatyppnmw8Ayt8QvjtResponse",
+  "type": "object",
+  "properties": {
+    "object": {
+      "type": "string",
+      "description": "Always \"NormAttorney\"."
+    },
+    "normAttorneyId": {
+      "type": "string",
+      "description": "Normalized attorney identifier."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the attorney."
+    },
+    "firstName": {
+      "type": "string",
+      "description": "First name."
+    },
+    "middleName": {
+      "type": "string",
+      "description": "Middle name."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name."
+    },
+    "caseSearchAPI": {
+      "type": "string",
+      "description": "API URL for case search related to this attorney."
+    },
+    "caseAnalyticsAPI": {
+      "type": "object",
+      "description": "Object containing various analytics API URLs."
+    },
+    "hasAssociatedPublicData": {
+      "type": "boolean",
+      "description": "Indicates if public data is associated."
+    },
+    "barRecordArray": {
+      "type": "array",
+      "description": "Array of bar record objects."
+    }
+  }
+}

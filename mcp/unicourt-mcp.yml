@@ -1,9 +1,214 @@
-generated: 2026-09-21
-method: none
+generated: '2026-09-22'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/unicourt-openapi-generated.yml
+status: candidate
 deployment:
   mode: none
-  endpoint: null
-  install: ""
-  package: ""
   auth: unknown
-  verified: derived
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.unicourt.com, docs.unicourt.com, app.unicourt.com, unicourt.com;
+  verdict hold-unverified. Candidate tools below are derived from the 47 operation(s) in the provider's own OpenAPI (40 listed); they describe
+  what a server WOULD expose, not one that exists.
+tools:
+- name: get_case_caseak44001593745a
+  operationId: get_case_CASEak44001593745a
+  method: GET
+  path: /case/CASEak44001593745a
+  description: case details Request
+- name: get_case_casearb6d8c898b0ba
+  operationId: get_case_CASEarb6d8c898b0ba
+  method: GET
+  path: /case/CASEarb6d8c898b0ba
+  description: Normalization
+- name: get_case_casearf7613462fa75_attorneys
+  operationId: get_case_CASEarf7613462fa75_attorneys
+  method: GET
+  path: /case/CASEarf7613462fa75/attorneys
+  description: Locate Hearings
+- name: get_case_casearf7613462fa75_hearings
+  operationId: get_case_CASEarf7613462fa75_hearings
+  method: GET
+  path: /case/CASEarf7613462fa75/hearings
+  description: Locate Hearings
+- name: get_case_casejr6533d15dc165
+  operationId: get_case_CASEjr6533d15dc165
+  method: GET
+  path: /case/CASEjr6533d15dc165
+  description: Case Details Request
+- name: get_case_count_analytics_by_case_type
+  operationId: get_caseCountAnalyticsByCaseType
+  method: GET
+  path: /caseCountAnalyticsByCaseType
+  description: Case Count Analytics By Case Type Request
+- name: get_case_count_analytics_by_norm_attorney
+  operationId: get_caseCountAnalyticsByNormAttorney
+  method: GET
+  path: /caseCountAnalyticsByNormAttorney
+  description: Case Count Analytics By Norm Attorney
+- name: get_case_count_analytics_by_norm_law_firm
+  operationId: get_caseCountAnalyticsByNormLawFirm
+  method: GET
+  path: /caseCountAnalyticsByNormLawFirm
+  description: Business Insights about Law Firms
+- name: get_case_document_order
+  operationId: get_caseDocumentOrder
+  method: GET
+  path: /caseDocumentOrder
+  description: Document Orders
+- name: get_case_document_order_callbacks_cbdo6373383f_kw0_kd0
+  operationId: get_caseDocumentOrder_callbacks_CBDO6373383fKW0Kd0
+  method: GET
+  path: /caseDocumentOrder/callbacks/CBDO6373383fKW0Kd0
+  description: Document Orders
+- name: get_case_document_order_callbacks_cbdobn_u64101c97e33
+  operationId: get_caseDocumentOrder_callbacks_CBDObnU64101c97e33
+  method: GET
+  path: /caseDocumentOrder/callbacks/CBDObnU64101c97e33
+  description: Document Orders
+- name: get_case_export_casegpea09e0763db3
+  operationId: get_caseExport_CASEgpea09e0763db3
+  method: GET
+  path: /caseExport/CASEgpea09e0763db3
+  description: Case Export
+- name: get_case_export_casepkca0efb77dfac
+  operationId: get_caseExport_CASEpkca0efb77dfac
+  method: GET
+  path: /caseExport/CASEpkca0efb77dfac
+  description: Case Export
+- name: get_case_export_callbacks_cbce3_sh766729f6024
+  operationId: get_caseExport_callbacks_CBCE3SH766729f6024
+  method: GET
+  path: /caseExport/callbacks/CBCE3SH766729f6024
+  description: Case Export
+- name: get_case_export_callbacks_cbcerv_h6672b1cez23
+  operationId: get_caseExport_callbacks_CBCERvH6672b1cez23
+  method: GET
+  path: /caseExport/callbacks/CBCERvH6672b1cez23
+  description: Case Export
+- name: put_case_import
+  operationId: put_caseImport
+  method: PUT
+  path: /caseImport
+  description: Submits a new case import request.
+- name: get_case_import_callbacks
+  operationId: get_caseImport_callbacks
+  method: GET
+  path: /caseImport/callbacks
+  description: Lists paginated CaseImportCallback objects with filters.
+- name: get_case_import_callbacks_case_import_callback_id
+  operationId: get_caseImport_callbacks_caseImportCallbackId
+  method: GET
+  path: /caseImport/callbacks/{caseImportCallbackId}
+  description: Retrieves a single CaseImportCallback by ID.
+- name: get_case_search
+  operationId: get_caseSearch
+  method: GET
+  path: /caseSearch
+  description: Case Search Request
+- name: put_case_update
+  operationId: put_caseUpdate
+  method: PUT
+  path: /caseUpdate
+  description: Alpha Case Update Overview
+- name: get_case_update_caseke15dba3978da9
+  operationId: get_caseUpdate_CASEke15dba3978da9
+  method: GET
+  path: /caseUpdate/CASEke15dba3978da9
+  description: Case Update
+- name: get_case_update_casene32920dcecabe
+  operationId: get_caseUpdate_CASEne32920dcecabe
+  method: GET
+  path: /caseUpdate/CASEne32920dcecabe
+  description: Case Update
+- name: get_case_update_case_id
+  operationId: get_caseUpdate_caseId
+  method: GET
+  path: /caseUpdate/{caseId}
+  description: Alpha Case Update Overview
+- name: get_case_updates
+  operationId: get_caseUpdates
+  method: GET
+  path: /caseUpdates
+  description: Retrieving Missed Updates
+- name: get_master_data_court
+  operationId: get_masterData_court
+  method: GET
+  path: /masterData/court
+  description: UniCourt's Court Standards Data for Court Request
+- name: get_norm_attorney_natyzn_y8_exmoe2r_wgj
+  operationId: get_normAttorney_NATYZnY8Exmoe2rWGJ
+  method: GET
+  path: /normAttorney/NATYZnY8Exmoe2rWGJ
+  description: Normalization
+- name: get_norm_attorney_natyp_pnm_w8_ay_t8_qvj_t
+  operationId: get_normAttorney_NATYpPnmW8AyT8QvjT
+  method: GET
+  path: /normAttorney/NATYpPnmW8AyT8QvjT
+  description: Locate Hearings
+- name: get_norm_attorney_natyst9_ko4_fsnjb_jt_h_case_count_analytic
+  operationId: get_normAttorney_NATYst9Ko4FSNjbJtH_caseCountAnalyticsByOpposingNormAttorney
+  method: GET
+  path: /normAttorney/NATYst9Ko4FSNjbJtH/caseCountAnalyticsByOpposingNormAttorney
+  description: Case Count Analytics By Opposing Norm Attorney
+- name: put_norm_attorney_track
+  operationId: put_normAttorneyTrack
+  method: PUT
+  path: /normAttorneyTrack
+  description: Alpha Norm Attorney Track Overview
+- name: delete_norm_attorney_track_norm_attorney_id
+  operationId: delete_normAttorneyTrack_normAttorneyId
+  method: DELETE
+  path: /normAttorneyTrack/{normAttorneyId}
+  description: Alpha Norm Attorney Track Overview
+- name: get_norm_attorney_track_norm_attorney_id
+  operationId: get_normAttorneyTrack_normAttorneyId
+  method: GET
+  path: /normAttorneyTrack/{normAttorneyId}
+  description: Alpha Norm Attorney Track Overview
+- name: get_norm_attorney_tracks
+  operationId: get_normAttorneyTracks
+  method: GET
+  path: /normAttorneyTracks
+  description: Alpha Norm Attorney Track Overview
+- name: put_norm_attorney_update
+  operationId: put_normAttorneyUpdate
+  method: PUT
+  path: /normAttorneyUpdate
+  description: Submits a new attorney refresh request.
+- name: get_norm_attorney_update_norm_attorney_id
+  operationId: get_normAttorneyUpdate_normAttorneyId
+  method: GET
+  path: /normAttorneyUpdate/{normAttorneyId}
+  description: Retrieves real‑time status and details for a single attorney.
+- name: get_norm_attorney_updates
+  operationId: get_normAttorneyUpdates
+  method: GET
+  path: /normAttorneyUpdates
+  description: Lists paginated NormAttorneyUpdatePreview objects for recent requests.
+- name: get_norm_law_firm_norg5od_eks_hwqrkv3i_associated_norm_parti
+  operationId: get_normLawFirm_NORG5odEKsHWqrkv3i_associatedNormParties
+  method: GET
+  path: /normLawFirm/NORG5odEKsHWqrkv3i/associatedNormParties
+  description: Business Insights about Law Firms
+- name: get_norm_law_firm_search
+  operationId: get_normLawFirmSearch
+  method: GET
+  path: /normLawFirmSearch
+  description: Norm Law Firm Search Request
+- name: put_norm_law_firm_track
+  operationId: put_normLawFirmTrack
+  method: PUT
+  path: /normLawFirmTrack
+  description: Alpha Norm Lawfirm Track Overview
+- name: delete_norm_law_firm_track_norm_law_firm_id
+  operationId: delete_normLawFirmTrack_normLawFirmId
+  method: DELETE
+  path: /normLawFirmTrack/{normLawFirmId}
+  description: Alpha Norm Lawfirm Track Overview
+- name: get_norm_law_firm_track_norm_law_firm_id
+  operationId: get_normLawFirmTrack_normLawFirmId
+  method: GET
+  path: /normLawFirmTrack/{normLawFirmId}
+  description: Alpha Norm Lawfirm Track Overview

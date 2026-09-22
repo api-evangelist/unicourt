@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/unicourt/main/json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json",
+  "title": "GetCaseCaseak44001593745AResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/unicourt-openapi-generated.yml#/components/schemas/GetCaseCaseak44001593745AResponse",
+  "type": "object",
+  "properties": {
+    "object": {
+      "type": "string",
+      "description": "Always \"Case\""
+    },
+    "caseId": {
+      "type": "string",
+      "description": "Case identifier"
+    },
+    "url": {
+      "type": "string",
+      "description": "Public URL for the case"
+    },
+    "caseNumber": {
+      "type": "string",
+      "description": "Case number"
+    },
+    "caseName": {
+      "type": "string",
+      "description": "Case name"
+    },
+    "filedDate": {
+      "type": "string",
+      "description": "Date the case was filed"
+    },
+    "hasOnlyMetaInfo": {
+      "type": "boolean",
+      "description": "Indicates if only meta info is present"
+    },
+    "courtServiceStatusId": {
+      "type": "string",
+      "description": "Court service status identifier"
+    },
+    "courtServiceStatusAPI": {
+      "type": "string",
+      "description": "API endpoint for court service status"
+    },
+    "court": {
+      "type": "object",
+      "description": "Court details object"
+    },
+    "courtLocation": {
+      "type": "object",
+      "description": "Court location details"
+    },
+    "caseType": {
+      "type": "object",
+      "description": "Case type details"
+    },
+    "chargeArray": {
+      "type": "array",
+      "description": "Array of charges"
+    },
+    "caseStatus": {
+      "type": "object",
+      "description": "Case status details"
+    },
+    "causeOfActionArray": {
+      "type": "array",
+      "description": "Array of causes of action"
+    },
+    "firstFetchDate": {
+      "type": "string",
+      "description": "First fetch timestamp"
+    },
+    "lastFetchDate": {
+      "type": "string",
+      "description": "Last fetch timestamp"
+    },
+    "lastFetchDateWithUpdates": {
+      "type": "string",
+      "description": "Last fetch with updates timestamp"
+    },
+    "participantsLastFetchDate": {
+      "type": "string",
+      "description": "Participants last fetch timestamp"
+    },
+    "sourceDataStatus": {
+      "type": "string",
+      "description": "Source data status"
+    },
+    "sourceCaseData": {
+      "type": "object",
+      "description": "Source case data object"
+    },
+    "hasDocumentsWithPreview": {
+      "type": "boolean",
+      "description": "Whether documents have preview"
+    },
+    "exportAPI": {
+      "type": "string",
+      "description": "API endpoint for case export"
+    },
+    "caseStats": {
+      "type": "object",
+      "description": "Statistics about the case"
+    },
+    "parties": {
+      "type": "object",
+      "description": "Parties involved in the case"
+    },
+    "attorneys": {
+      "type": "object",
+      "description": "Attorneys involved in the case"
+    }
+  }
+}

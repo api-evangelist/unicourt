@@ -1,22 +1,14 @@
 aid: unicourt
-
 name: UniCourt
-
 image: https://cdn.prod.website-files.com/68e96a346d8a3699dd3316b1/698113f630e1434ec18db8f1_og-img-logo.jpg
-
 description: UniCourt provides a single platform for accessing litigation data, analytics, and insights. It offers APIs, widgets, and data share
   solutions that give real-time access to over 2 billion dockets and documents from 4,000+ state and federal courts. Customers can integrate structured
   litigation data into applications, data warehouses, and experience management systems for better decision‑making and risk assessment.
-
 url: https://raw.githubusercontent.com/api-evangelist/unicourt/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:data
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
-
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
@@ -25,27 +17,36 @@ x-coverage:
   - url: https://docs.unicourt.com/authentication-and-authorization
     status: 200
   checked: 2026-09-21
-
 specificationVersion: '0.20'
-
 created: '2026-09-21'
-
 modified: '2026-09-21'
-
 tags:
+- Legal Tech
+- Data Analytics
+- Litigation
+- Platform
+tags_raw:
 - LegalTech
 - DataAnalytics
 - Litigation
 - API
 - Platform
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: Spectral
+  url: rules/unicourt-rules.yml
+- type: JSONLD
+  url: json-ld/unicourt-context.jsonld
+- type: Vocabulary
+  url: vocabulary/unicourt-vocabulary.yml
+- type: DataModel
+  url: data-model/unicourt-data-model.yml
+- type: Conformance
+  url: conformance/unicourt-conformance.yml
 - type: Conventions
   url: conventions/unicourt-conventions.yml
 - type: DomainSecurity
@@ -72,12 +73,34 @@ common:
   url: https://unicourt.com/terms-of-service
 - type: PrivacyPolicy
   url: https://unicourt.com/privacy-policy
-
 apis:
 - name: UniCourt API
   description: UniCourt provides litigation data APIs as described in their documentation.
   humanURL: https://docs.unicourt.com/
   aid: unicourt:unicourt-api
+- aid: unicourt:unicourt-api
+  name: UniCourt API
+  description: 'UniCourt API as documented publicly: 47 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
+
+    not the provider''s own document.'
+  humanURL: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  baseURL: https://enterpriseapi.unicourt.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/unicourt-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
 x-enrichment:
   date: '2026-09-21'
   status: enriched

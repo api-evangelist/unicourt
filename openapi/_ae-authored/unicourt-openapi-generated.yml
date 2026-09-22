@@ -1,0 +1,2207 @@
+openapi: 3.1.0
+info:
+  title: UniCourt API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+paths:
+  /case/CASEak44001593745a:
+    get:
+      operationId: get_case_CASEak44001593745a
+      tags:
+      - Case
+      summary: case details Request
+      description: Retrieves detailed information for a specific case.
+      x-source: https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCaseak44001593745AResponse'
+  /case/CASEarb6d8c898b0ba:
+    get:
+      operationId: get_case_CASEarb6d8c898b0ba
+      tags:
+      - Case
+      summary: Normalization
+      description: Retrieve detailed information for a specific case.
+      x-source: https://docs.unicourt.com/knowledge-base/normalization-docs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearb6D8C898B0BaResponse'
+  /case/CASEarf7613462fa75/attorneys:
+    get:
+      operationId: get_case_CASEarf7613462fa75_attorneys
+      tags:
+      - Case
+      summary: Locate Hearings
+      description: Retrieves attorneys associated with the specified case.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      parameters:
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearf7613462Fa75AttorneysResponse'
+  /case/CASEarf7613462fa75/hearings:
+    get:
+      operationId: get_case_CASEarf7613462fa75_hearings
+      tags:
+      - Case
+      summary: Locate Hearings
+      description: Retrieves hearings for the specified case.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      parameters:
+      - name: sortBy
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sorting order, e.g., "latest to oldest".
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearf7613462Fa75HearingsResponse'
+  /case/CASEjr6533d15dc165:
+    get:
+      operationId: get_case_CASEjr6533d15dc165
+      tags:
+      - Case
+      summary: Case Details Request
+      description: Retrieves details for a specific case identified by caseId.
+      x-source: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+      parameters:
+      - name: accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasejr6533D15Dc165Response'
+  /caseCountAnalyticsByCaseType:
+    get:
+      operationId: get_caseCountAnalyticsByCaseType
+      tags:
+      - Casecountanalyticsbycasetype
+      summary: Case Count Analytics By Case Type Request
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Query containing normLawFirmId
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for paginated results
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasecountanalyticsbycasetypeResponse'
+  /caseCountAnalyticsByNormAttorney:
+    get:
+      operationId: get_caseCountAnalyticsByNormAttorney
+      tags:
+      - Casecountanalyticsbynormattorney
+      summary: Case Count Analytics By Norm Attorney
+      description: Retrieves case count analytics for attorneys matching the provided query filters.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Lucene query string to filter results
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasecountanalyticsbynormattorneyResponse'
+  /caseCountAnalyticsByNormLawFirm:
+    get:
+      operationId: get_caseCountAnalyticsByNormLawFirm
+      tags:
+      - Casecountanalyticsbynormlawfirm
+      summary: Business Insights about Law Firms
+      description: Retrieve case count analytics aggregated by law firm.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Query containing normLawFirmId, e.g. normLawFirmId:"NORG5odEKsHWqrkv3i"
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasecountanalyticsbynormlawfirmResponse'
+  /caseDocumentOrder:
+    get:
+      operationId: get_caseDocumentOrder
+      tags:
+      - Casedocumentorder
+      summary: Document Orders
+      x-source: https://docs.unicourt.com/knowledge-base/document-orders
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasedocumentorderResponse'
+  /caseDocumentOrder/callbacks/CBDO6373383fKW0Kd0:
+    get:
+      operationId: get_caseDocumentOrder_callbacks_CBDO6373383fKW0Kd0
+      tags:
+      - Casedocumentorder
+      summary: Document Orders
+      x-source: https://docs.unicourt.com/knowledge-base/document-orders
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response'
+  /caseDocumentOrder/callbacks/CBDObnU64101c97e33:
+    get:
+      operationId: get_caseDocumentOrder_callbacks_CBDObnU64101c97e33
+      tags:
+      - Casedocumentorder
+      summary: Document Orders
+      x-source: https://docs.unicourt.com/knowledge-base/document-orders
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasedocumentorderCallbacksCbdobnu64101C97E33Response'
+  /caseExport/CASEgpea09e0763db3:
+    get:
+      operationId: get_caseExport_CASEgpea09e0763db3
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Start an asynchronous export for a PACER case, returning a CaseExportCallback with a callback ID.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCasegpea09E0763Db3Response'
+  /caseExport/CASEpkca0efb77dfac:
+    get:
+      operationId: get_caseExport_CASEpkca0efb77dfac
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve information about the specified case id and start an asynchronous export. Returns a CaseExportCallback object with
+        a caseExportCallbackId.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCasepkca0Efb77DfacResponse'
+  /caseExport/callbacks/CBCE3SH766729f6024:
+    get:
+      operationId: get_caseExport_callbacks_CBCE3SH766729f6024
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve the export callback object, which includes the file URL when the export is complete.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCallbacksCbce3Sh766729F6024Response'
+  /caseExport/callbacks/CBCERvH6672b1cez23:
+    get:
+      operationId: get_caseExport_callbacks_CBCERvH6672b1cez23
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve the completed export callback for a PACER case, providing the file URL.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCallbacksCbcervh6672B1Cez23Response'
+  /caseImport:
+    put:
+      operationId: put_caseImport
+      tags:
+      - Caseimport
+      summary: Submits a new case import request.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+      parameters:
+      - name: caseNumber
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The case number to import.
+      - name: priorityLevel
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Controls processing urgency and timeout. Allowed values: level1, level2, level5. Default: level5.'
+      - name: notifyOnDelay
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: If true, sends a notification when the request enters the DELAYED state.
+      - name: courtId
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Court identifier required for some sources.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutCaseimportRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutCaseimportResponse'
+  /caseImport/callbacks:
+    get:
+      operationId: get_caseImport_callbacks
+      tags:
+      - Caseimport
+      summary: Lists paginated CaseImportCallback objects with filters.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+      parameters:
+      - name: callbackGeneratedDate
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Timestamp to start fetching callbacks (date-time, length 25).
+      - name: startDate
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The time when the import was requested (date-time, length 25).
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Filter by status: IN_PROGRESS, DELAYED, COMPLETE, FAILURE.'
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Pagination page number.
+      - name: pageSize
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Number of items per page.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseimportCallbacksResponse'
+  /caseImport/callbacks/{caseImportCallbackId}:
+    get:
+      operationId: get_caseImport_callbacks_caseImportCallbackId
+      tags:
+      - Caseimport
+      summary: Retrieves a single CaseImportCallback by ID.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+      parameters:
+      - name: caseImportCallbackId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseimportCallbacksCaseimportcallbackidResponse'
+  /caseSearch:
+    get:
+      operationId: get_caseSearch
+      tags:
+      - Casesearch
+      summary: Case Search Request
+      description: Searches for cases using keyword queries and optional sorting and pagination.
+      x-source: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Keyword-based query, e.g., caseName:pfizer
+      - name: sort
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Field to sort by, e.g., filedDate
+      - name: order
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sort order, e.g., desc
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for pagination
+      - name: accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasesearchResponse'
+  /caseUpdate:
+    put:
+      operationId: put_caseUpdate
+      tags:
+      - Caseupdate
+      summary: Alpha Case Update Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+      parameters:
+      - name: caseId
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 18‑character case identifier
+      - name: priorityLevel
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Controls processing urgency and timeout. Allowed values: level1, level2, level5. Default: level5.'
+      - name: notifyOnDelay
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: 'If true, sends a notification when the request enters the DELAYED state. Default: false.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutCaseupdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutCaseupdateResponse'
+  /caseUpdate/CASEke15dba3978da9:
+    get:
+      operationId: get_caseUpdate_CASEke15dba3978da9
+      tags:
+      - Caseupdate
+      summary: Case Update
+      description: Get Case updates for the requested Case Id.
+      x-source: https://docs.unicourt.com/knowledge-base/case-update
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCaseke15Dba3978Da9Response'
+  /caseUpdate/CASEne32920dcecabe:
+    get:
+      operationId: get_caseUpdate_CASEne32920dcecabe
+      tags:
+      - Caseupdate
+      summary: Case Update
+      description: Get Case updates for the requested Case Id.
+      x-source: https://docs.unicourt.com/knowledge-base/case-update
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCasene32920DcecabeResponse'
+  /caseUpdate/{caseId}:
+    get:
+      operationId: get_caseUpdate_caseId
+      tags:
+      - Caseupdate
+      summary: Alpha Case Update Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+      parameters:
+      - name: caseId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCaseidResponse'
+  /caseUpdates:
+    get:
+      operationId: get_caseUpdates
+      tags:
+      - Caseupdates
+      summary: Retrieving Missed Updates
+      x-source: https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+      parameters:
+      - name: requestedDate
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Approximately 4 hrs before the start time (UTC) of the maintenance window in YYYY-MM-DDThh:mm:ss+00:00 format. This parameter
+          specifies the earliest update time you are interested in.
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter updates by status (e.g., COMPLETE).
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: For paginated results, specify the page number.
+      responses:
+        '200':
+          description: Success (status as documented)
+  /masterData/court:
+    get:
+      operationId: get_masterData_court
+      tags:
+      - Masterdata
+      summary: UniCourt's Court Standards Data for Court Request
+      description: Retrieves court metadata based on query parameters.
+      x-source: https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The name of the court, e.g. name:(Los Angeles County Superior Court)
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination (defaults to first page)
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMasterdataCourtResponse'
+  /normAttorney/NATYZnY8Exmoe2rWGJ:
+    get:
+      operationId: get_normAttorney_NATYZnY8Exmoe2rWGJ
+      tags:
+      - Normattorney
+      summary: Normalization
+      description: Retrieve normalized attorney details.
+      x-source: https://docs.unicourt.com/knowledge-base/normalization-docs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyzny8Exmoe2RwgjResponse'
+  /normAttorney/NATYpPnmW8AyT8QvjT:
+    get:
+      operationId: get_normAttorney_NATYpPnmW8AyT8QvjT
+      tags:
+      - Normattorney
+      summary: Locate Hearings
+      description: Retrieves normalized attorney details for the given normalized attorney ID.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyppnmw8Ayt8QvjtResponse'
+  /normAttorney/NATYst9Ko4FSNjbJtH/caseCountAnalyticsByOpposingNormAttorney:
+    get:
+      operationId: get_normAttorney_NATYst9Ko4FSNjbJtH_caseCountAnalyticsByOpposingNormAttorney
+      tags:
+      - Normattorney
+      summary: Case Count Analytics By Opposing Norm Attorney
+      description: Retrieves analytics for attorneys who frequently appear in opposition to the specified attorney.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Lucene query string to filter opposing attorneys
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin'
+  /normAttorneyTrack:
+    put:
+      operationId: put_normAttorneyTrack
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormattorneytrackRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormattorneytrackResponse'
+  /normAttorneyTrack/{normAttorneyId}:
+    delete:
+      operationId: delete_normAttorneyTrack_normAttorneyId
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      parameters:
+      - name: normAttorneyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteNormattorneytrackNormattorneyidResponse'
+    get:
+      operationId: get_normAttorneyTrack_normAttorneyId
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      parameters:
+      - name: normAttorneyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneytrackNormattorneyidResponse'
+  /normAttorneyTracks:
+    get:
+      operationId: get_normAttorneyTracks
+      tags:
+      - Normattorneytracks
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneytracksResponse'
+  /normAttorneyUpdate:
+    put:
+      operationId: put_normAttorneyUpdate
+      tags:
+      - Normattorneyupdate
+      summary: Submits a new attorney refresh request.
+      description: Submits an on‑demand attorney refresh for the specified normAttorneyId (and optional subset of states using stateCodeArray).
+        Returns a NormAttorneyUpdate object with initial status.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormattorneyupdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormattorneyupdateResponse'
+  /normAttorneyUpdate/{normAttorneyId}:
+    get:
+      operationId: get_normAttorneyUpdate_normAttorneyId
+      tags:
+      - Normattorneyupdate
+      summary: Retrieves real‑time status and details for a single attorney.
+      description: Fetches a NormAttorneyUpdate object for a specific 18‑char normAttorneyId, including real‑time status, timestamps, and, on
+        COMPLETE, the full NormAttorney object when available.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+      parameters:
+      - name: normAttorneyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyupdateNormattorneyidResponse'
+  /normAttorneyUpdates:
+    get:
+      operationId: get_normAttorneyUpdates
+      tags:
+      - Normattorneyupdates
+      summary: Lists paginated NormAttorneyUpdatePreview objects for recent requests.
+      description: Retrieves a paginated list of NormAttorneyUpdatePreview objects for requests submitted within a time window (up to 30 days)
+        with optional filters.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+      parameters:
+      - name: normAttorneyId
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter by specific attorney ID.
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter by update status.
+      - name: lastNDays
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Look‑back window in days (1–30, default 1).
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyupdatesResponse'
+  /normLawFirm/NORG5odEKsHWqrkv3i/associatedNormParties:
+    get:
+      operationId: get_normLawFirm_NORG5odEKsHWqrkv3i_associatedNormParties
+      tags:
+      - Normlawfirm
+      summary: Business Insights about Law Firms
+      description: Identify top client parties for a law firm for a specific case type.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Query containing caseTypeId, e.g. caseTypeId:"CTYPFQK3XeZduAfEBf"
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons'
+  /normLawFirmSearch:
+    get:
+      operationId: get_normLawFirmSearch
+      tags:
+      - Normlawfirmsearch
+      summary: Norm Law Firm Search Request
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Keyword expression to search normalized law firms
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for paginated results
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmsearchResponse'
+  /normLawFirmTrack:
+    put:
+      operationId: put_normLawFirmTrack
+      tags:
+      - Normlawfirmtrack
+      summary: Alpha Norm Lawfirm Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormlawfirmtrackRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormlawfirmtrackResponse'
+  /normLawFirmTrack/{normLawFirmId}:
+    delete:
+      operationId: delete_normLawFirmTrack_normLawFirmId
+      tags:
+      - Normlawfirmtrack
+      summary: Alpha Norm Lawfirm Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+      parameters:
+      - name: normLawFirmId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteNormlawfirmtrackNormlawfirmidResponse'
+    get:
+      operationId: get_normLawFirmTrack_normLawFirmId
+      tags:
+      - Normlawfirmtrack
+      summary: Alpha Norm Lawfirm Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+      parameters:
+      - name: normLawFirmId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmtrackNormlawfirmidResponse'
+  /normLawFirmTracks:
+    get:
+      operationId: get_normLawFirmTracks
+      tags:
+      - Normlawfirmtracks
+      summary: Alpha Norm Lawfirm Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmtracksResponse'
+  /normLawFirmUpdate:
+    put:
+      operationId: put_normLawFirmUpdate
+      tags:
+      - Normlawfirmupdate
+      summary: Submits a new law firm refresh request.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormlawfirmupdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormlawfirmupdateResponse'
+  /normLawFirmUpdate/{normLawFirmId}:
+    get:
+      operationId: get_normLawFirmUpdate_normLawFirmId
+      tags:
+      - Normlawfirmupdate
+      summary: Fetches a NormLawFirmUpdate object for a specific 18-char normLawFirmId, including real-time status, timestamps, and, on COMPLETE,
+        the full NormLawFirm object when available.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+      parameters:
+      - name: normLawFirmId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmupdateNormlawfirmidResponse'
+  /normLawFirmUpdates:
+    get:
+      operationId: get_normLawFirmUpdates
+      tags:
+      - Normlawfirmupdates
+      summary: Lists paginated NormLawFirmUpdatePreview objects for recent requests, with filters.
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+      parameters:
+      - name: normLawFirmId
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter by specific law firm ID.
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter by request status.
+      - name: lastNDays
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Look‑back window in days (1–30, default 1).
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmupdatesResponse'
+  /pacerCaseLocator/partySearch/civilCourts:
+    get:
+      operationId: get_pacerCaseLocator_partySearch_civilCourts
+      tags:
+      - Pacercaselocator
+      summary: PACER Party Search for Civil Court
+      description: Searches PACER party data for civil courts.
+      x-source: https://docs.unicourt.com/knowledge-base/pacer-api
+      parameters:
+      - name: pacerUserId
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your PACER User Id
+      - name: pacerClientCode
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your PACER Client Code
+      - name: caseNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The case number to search
+      - name: lastName
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Party last name
+      - name: firstName
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Party first name
+      - name: middleName
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Party middle name
+      - name: generation
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Party generation suffix
+      - name: partyType
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Party type code
+      - name: sortParameterQuery
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sorting parameter, e.g., lastName,ASC
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPacercaselocatorPartysearchCivilcourtsResponse'
+  /pacerCredential:
+    put:
+      operationId: put_pacerCredential
+      tags:
+      - Pacercredential
+      summary: Document Orders
+      x-source: https://docs.unicourt.com/knowledge-base/document-orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutPacercredentialRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutPacercredentialResponse'
+  /pacerCredential/{pacerUserId}:
+    delete:
+      operationId: delete_pacerCredential_pacerUserId
+      tags:
+      - Pacercredential
+      summary: Remove the existing credentials by using DELETE /pacerCredential/{pacerUserId} endpoint.
+      description: Deletes a previously stored PACER credential.
+      x-source: https://docs.unicourt.com/knowledge-base/pacer-api
+      parameters:
+      - name: pacerUserId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+components:
+  schemas:
+    GetCaseCaseak44001593745AResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "Case"
+        caseId:
+          type: string
+          description: Case identifier
+        url:
+          type: string
+          description: Public URL for the case
+        caseNumber:
+          type: string
+          description: Case number
+        caseName:
+          type: string
+          description: Case name
+        filedDate:
+          type: string
+          description: Date the case was filed
+        hasOnlyMetaInfo:
+          type: boolean
+          description: Indicates if only meta info is present
+        courtServiceStatusId:
+          type: string
+          description: Court service status identifier
+        courtServiceStatusAPI:
+          type: string
+          description: API endpoint for court service status
+        court:
+          type: object
+          description: Court details object
+        courtLocation:
+          type: object
+          description: Court location details
+        caseType:
+          type: object
+          description: Case type details
+        chargeArray:
+          type: array
+          description: Array of charges
+        caseStatus:
+          type: object
+          description: Case status details
+        causeOfActionArray:
+          type: array
+          description: Array of causes of action
+        firstFetchDate:
+          type: string
+          description: First fetch timestamp
+        lastFetchDate:
+          type: string
+          description: Last fetch timestamp
+        lastFetchDateWithUpdates:
+          type: string
+          description: Last fetch with updates timestamp
+        participantsLastFetchDate:
+          type: string
+          description: Participants last fetch timestamp
+        sourceDataStatus:
+          type: string
+          description: Source data status
+        sourceCaseData:
+          type: object
+          description: Source case data object
+        hasDocumentsWithPreview:
+          type: boolean
+          description: Whether documents have preview
+        exportAPI:
+          type: string
+          description: API endpoint for case export
+        caseStats:
+          type: object
+          description: Statistics about the case
+        parties:
+          type: object
+          description: Parties involved in the case
+        attorneys:
+          type: object
+          description: Attorneys involved in the case
+    GetCaseCasearb6D8C898B0BaResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        url:
+          type: string
+        caseNumber:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+        court:
+          type: object
+        courtLocation:
+          type: object
+        caseType:
+          type: object
+        caseStatus:
+          type: object
+        attorneys:
+          type: object
+        judges:
+          type: object
+        docketEntries:
+          type: object
+    GetCaseCasearf7613462Fa75AttorneysResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "Attorneys".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of attorneys.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
+          type: string
+          description: URL for the next page (if any).
+        attorneyArray:
+          type: array
+          description: Array of attorney objects.
+    GetCaseCasearf7613462Fa75HearingsResponse:
+      type: object
+      properties:
+        hearingArray:
+          type: array
+          description: Array of hearing objects.
+        object:
+          type: string
+          description: Always "Hearings".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of hearings.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
+          type: string
+          description: URL for the next page (if any).
+    GetCaseCasejr6533D15Dc165Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        url:
+          type: string
+        caseNumber:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+        hasOnlyMetaInfo:
+          type: boolean
+    GetCasecountanalyticsbycasetypeResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        nextPageAPI:
+          type: string
+        previousPageAPI:
+          type: string
+        results:
+          type: array
+          description: Array of case count analytics per case type
+        caseCount:
+          type: integer
+          description: Number of cases for the case type
+        caseSearchAPI:
+          type: string
+          description: API endpoint to search the cases
+        caseType:
+          type: object
+          description: Details of the case type
+        caseType.object:
+          type: string
+        caseType.caseClassId:
+          type: string
+        caseType.areaOfLawId:
+          type: string
+        caseType.caseTypeGroupId:
+          type: string
+        caseType.caseTypeId:
+          type: string
+        caseType.caseClass:
+          type: string
+        caseType.areaOfLaw:
+          type: string
+        caseType.caseTypeGroup:
+          type: string
+        caseType.name:
+          type: string
+        caseType.saliCode:
+          type: string
+        caseType.caseTypeTag:
+          type: string
+        caseType.createdDate:
+          type: string
+          description: ISO‑8601 timestamp
+    GetCasecountanalyticsbynormattorneyResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Response object type
+        results:
+          type: array
+          description: List of attorney analytics
+        normAttorneyId:
+          type: string
+          description: Normalized attorney identifier
+        normAttorneyName:
+          type: string
+          description: Attorney name
+        caseSearchAPI:
+          type: string
+          description: API URL to search cases for this attorney
+        caseCount:
+          type: integer
+          description: Number of cases
+        nextPageAPI:
+          type: string
+          description: URL for next page
+        previousPageAPI:
+          type: string
+          description: URL for previous page
+        totalPages:
+          type: integer
+          description: Total number of pages
+        totalCaseCount:
+          type: integer
+          description: Total case count across all results
+        totalNormAttorneyCount:
+          type: integer
+          description: Total number of distinct attorneys
+    GetCasecountanalyticsbynormlawfirmResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        nextPageAPI:
+          type: string
+        previousPageAPI:
+          type: string
+        results:
+          type: array
+          description: Array of case count analytics by norm law firm
+        totalPages:
+          type: integer
+        totalCaseCount:
+          type: integer
+        totalCaseTypeCount:
+          type: integer
+    GetCasedocumentorderResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseDocumentOrderCallbackId:
+          type: string
+        caseDocumentId:
+          type: string
+        callbackGeneratedDate:
+          type: string
+          description: null until callback is generated
+        status:
+          type: string
+          description: IN_PROGRESS
+        caseDocument:
+          type: object
+          description: null until document is ready
+        caseDocumentOrderCallbackAPI:
+          type: string
+        file:
+          type: object
+          description: null until document is ready
+        exception:
+          type: string
+    GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseDocumentOrderCallbackId:
+          type: string
+        caseDocumentId:
+          type: string
+        callbackGeneratedDate:
+          type: string
+        status:
+          type: string
+          description: COMPLETE
+        caseDocument:
+          type: object
+        caseDocumentOrderCallbackAPI:
+          type: string
+        file:
+          type: object
+        exception:
+          type: string
+    GetCasedocumentorderCallbacksCbdobnu64101C97E33Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseDocumentOrderCallbackId:
+          type: string
+        caseDocumentId:
+          type: string
+        callbackGeneratedDate:
+          type: string
+        status:
+          type: string
+          description: COMPLETE
+        caseDocument:
+          type: object
+        caseDocumentOrderCallbackAPI:
+          type: string
+        file:
+          type: object
+        exception:
+          type: string
+    GetCaseexportCasegpea09E0763Db3Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was requested.
+        callbackGeneratedDate:
+          type: string
+          description: When the callback was generated (null initially).
+        status:
+          type: string
+          description: Export status, e.g., IN_PROGRESS.
+        caseExportCallbackAPI:
+          type: string
+          description: URL to retrieve the callback.
+        file:
+          type: object
+          description: Export file object when complete.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCasepkca0Efb77DfacResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was requested.
+        callbackGeneratedDate:
+          type: string
+          description: When the callback was generated (null initially).
+        status:
+          type: string
+          description: Export status, e.g., IN_PROGRESS.
+        caseExportCallbackAPI:
+          type: string
+          description: URL to retrieve the callback.
+        file:
+          type: object
+          description: Export file object when complete.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCallbacksCbce3Sh766729F6024Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was exported.
+        callbackGeneratedDate:
+          type: string
+          description: Timestamp when the callback was generated.
+        status:
+          type: string
+          description: Export status, e.g., COMPLETE.
+        caseExportCallbackAPI:
+          type: string
+          description: URL of this callback endpoint.
+        file:
+          type: object
+          description: ExportFile object containing the download link.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCallbacksCbcervh6672B1Cez23Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was exported.
+        callbackGeneratedDate:
+          type: string
+          description: Timestamp when the callback was generated.
+        status:
+          type: string
+          description: Export status, e.g., COMPLETE.
+        caseExportCallbackAPI:
+          type: string
+          description: URL of this callback endpoint.
+        file:
+          type: object
+          description: ExportFile object containing the download link.
+        exception:
+          type: object
+          description: Error information if any.
+    PutCaseimportRequest:
+      type: object
+      properties:
+        caseNumber:
+          type: string
+        priorityLevel:
+          type: string
+        notifyOnDelay:
+          type: boolean
+        courtId:
+          type: string
+      required:
+      - caseNumber
+    PutCaseimportResponse:
+      type: object
+      properties:
+        caseImportCallbackId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: object
+    GetCaseimportCallbacksResponse:
+      type: object
+      properties:
+        pagination:
+          type: object
+        callbackArray:
+          type: array
+          description: Array of CaseImportCallback items.
+    GetCaseimportCallbacksCaseimportcallbackidResponse:
+      type: object
+      properties:
+        caseImportCallbackId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: object
+        importedCaseReferences:
+          type: array
+        case:
+          type: object
+          description: Full case object included when status is COMPLETE.
+    GetCasesearchResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+    PutCaseupdateRequest:
+      type: object
+      properties:
+        caseId:
+          type: string
+          description: 18‑character case identifier
+        priorityLevel:
+          type: string
+          description: 'level1 (Critical), level2 (High), level5 (Normal). Default: level5.'
+        notifyOnDelay:
+          type: boolean
+          description: Whether to send a delay notification.
+      required:
+      - caseId
+    PutCaseupdateResponse:
+      type: object
+      properties:
+        caseUpdateId:
+          type: string
+          description: Identifier for the case update request.
+        status:
+          type: string
+          description: Current status (IN_PROGRESS, DELAYED, COMPLETE, FAILURE).
+        statusDetails:
+          type: object
+          description: Optional object providing issueSource, issueType, statusAsOn, nextRetry, details.
+    GetCaseupdateCaseke15Dba3978Da9Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        status:
+          type: string
+        requestedDate:
+          type: string
+        caseAPI:
+          type: string
+        pacerOptions:
+          type: object
+          description: Present for PACER cases
+        exception:
+          type: object
+        case:
+          type: object
+    GetCaseupdateCasene32920DcecabeResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        status:
+          type: string
+        requestedDate:
+          type: string
+        caseAPI:
+          type: string
+        pacerOptions:
+          type: object
+          description: Present for PACER cases
+        exception:
+          type: object
+        case:
+          type: object
+    GetCaseupdateCaseidResponse:
+      type: object
+      properties:
+        caseId:
+          type: string
+          description: The case identifier.
+        status:
+          type: string
+          description: Current processing status.
+        statusDetails:
+          type: object
+          description: Optional details object (issueSource, issueType, statusAsOn, nextRetry, details).
+        caseObject:
+          type: object
+          description: Full case data when status is COMPLETE.
+    GetMasterdataCourtResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CourtResponse"
+        courtArray:
+          type: array
+          description: Array of court objects
+        nextPageAPI:
+          type: string
+          description: Link to next page (if any)
+        previousPageAPI:
+          type: string
+          description: Link to previous page (if any)
+        pageNumber:
+          type: integer
+          description: Current page number
+        totalPages:
+          type: integer
+          description: Total number of pages
+        totalCount:
+          type: integer
+          description: Total number of records
+    GetNormattorneyNatyzny8Exmoe2RwgjResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        normAttorneyId:
+          type: string
+        normAttorneyName:
+          type: string
+        confidenceScore:
+          type: number
+        scoreConstituents:
+          type: object
+        associatedNormJudgesAPI:
+          type: string
+        associatedNormPartiesAPI:
+          type: string
+        associatedNormLawFirmsAPI:
+          type: string
+        caseCountAnalyticsByNormAttorneyAPI:
+          type: string
+        caseCountAnalyticsByOpposingNormAttorneyAPI:
+          type: string
+    GetNormattorneyNatyppnmw8Ayt8QvjtResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "NormAttorney".
+        normAttorneyId:
+          type: string
+          description: Normalized attorney identifier.
+        name:
+          type: string
+          description: Full name of the attorney.
+        firstName:
+          type: string
+          description: First name.
+        middleName:
+          type: string
+          description: Middle name.
+        lastName:
+          type: string
+          description: Last name.
+        caseSearchAPI:
+          type: string
+          description: API URL for case search related to this attorney.
+        caseAnalyticsAPI:
+          type: object
+          description: Object containing various analytics API URLs.
+        hasAssociatedPublicData:
+          type: boolean
+          description: Indicates if public data is associated.
+        barRecordArray:
+          type: array
+          description: Array of bar record objects.
+    GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Response object type
+        results:
+          type: array
+          description: List of opposing attorney analytics
+        normAttorneyId:
+          type: string
+          description: Normalized opposing attorney identifier
+        normAttorneyName:
+          type: string
+          description: Opposing attorney name
+        caseSearchAPI:
+          type: string
+          description: API URL to search cases for this opposing attorney
+        caseCount:
+          type: integer
+          description: Number of cases where they opposed the target attorney
+        nextPageAPI:
+          type: string
+          description: URL for next page
+        previousPageAPI:
+          type: string
+          description: URL for previous page
+        totalPages:
+          type: integer
+          description: Total number of pages
+        totalCaseCount:
+          type: integer
+          description: Total case count across all opposing results
+        totalNormAttorneyCount:
+          type: integer
+          description: Total number of distinct opposing attorneys
+    PutNormattorneytrackRequest:
+      type: object
+      properties:
+        normAttorneyId:
+          type: string
+          description: Identifier of the attorney to track
+        stateCodeArray:
+          type: array
+          description: Required array of state codes indicating where the attorney is barred. Can be empty [] to consider all barred states.
+        scheduleOptions:
+          type: object
+          description: Options for the tracking schedule
+        scheduleOptions.refreshWindow:
+          type: string
+          description: 'Frequency of tracking. Allowed values: 1W, 2W, 1M.'
+        scheduleOptions.startDate:
+          type: string
+          description: Optional start date (YYYY-MM-DD). Must be today or a future date.
+        scheduleOptions.endDate:
+          type: string
+          description: Optional end date (YYYY-MM-DD) to stop tracking after this date.
+        notifyOnDelay:
+          type: boolean
+          description: Ignored for Norm Attorney Track; always treated as false.
+      required:
+      - normAttorneyId
+    PutNormattorneytrackResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Indicates whether a track was added or updated, with estimatedTracksPerMonth based on the selected refresh window.
+    DeleteNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        DeleteResponse:
+          type: object
+          description: Result of the delete operation.
+    GetNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Tracking details for the specified attorney, including status and schedule information.
+    GetNormattorneytracksResponse:
+      type: object
+      properties:
+        NormAttorneyListResponse:
+          type: object
+          description: List of tracked attorneys with optional filters and pagination.
+    PutNormattorneyupdateRequest:
+      type: object
+      properties:
+        normAttorneyId:
+          type: string
+          description: The 18‑character identifier of the attorney to refresh.
+        stateCodeArray:
+          type: array
+          description: Array of two‑letter state codes to limit the update; empty array means all barred states.
+        priorityLevel:
+          type: string
+          description: Processing timeout level; only "level5" is supported. Defaults to "level5".
+        notifyOnDelay:
+          type: boolean
+          description: Ignored for Norm Attorney Update; always treated as false.
+      required:
+      - normAttorneyId
+      - stateCodeArray
+    PutNormattorneyupdateResponse:
+      type: object
+      properties:
+        normAttorneyUpdateId:
+          type: string
+          description: Identifier of the update request.
+        status:
+          type: string
+          description: Current status (e.g., IN_PROGRESS, COMPLETE, FAILURE).
+        statusDetails:
+          type: string
+          description: Always null for this endpoint.
+    GetNormattorneyupdateNormattorneyidResponse:
+      type: object
+      properties:
+        normAttorneyUpdateId:
+          type: string
+          description: Identifier of the update request.
+        status:
+          type: string
+          description: Current processing status.
+        statusDetails:
+          type: string
+          description: Always null for this endpoint.
+        normAttorney:
+          type: object
+          description: Full NormAttorney object when status is COMPLETE.
+    GetNormattorneyupdatesResponse:
+      type: object
+      properties:
+        updates:
+          type: array
+          description: List of preview objects for recent update requests.
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalPages:
+          type: integer
+          description: Total number of pages available.
+    GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons:
+      type: object
+      properties:
+        associatedNormPartyArray:
+          type: array
+          description: Array of associated parties with case counts
+    GetNormlawfirmsearchResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        normLawFirmSearchResultArray:
+          type: array
+          description: Array of matching law‑firm results
+        q:
+          type: string
+        normLawFirmSearchId:
+          type: string
+        nextPageAPI:
+          type: string
+          description: URL for the next page of results
+        previousPageAPI:
+          type: string
+          description: URL for the previous page of results
+        pageNumber:
+          type: integer
+        totalPages:
+          type: integer
+        totalCount:
+          type: integer
+    PutNormlawfirmtrackRequest:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+          description: Identifier of the law firm to track
+        scheduleOptions:
+          type: object
+          description: Options for the tracking schedule
+        scheduleOptions.refreshWindow:
+          type: string
+          description: 'Frequency of tracking (allowed values: 1W, 2W, 1M)'
+        scheduleOptions.startDate:
+          type: string
+          description: Optional start date (YYYY-MM-DD)
+        scheduleOptions.endDate:
+          type: string
+          description: Optional end date (YYYY-MM-DD)
+        notifyOnDelay:
+          type: boolean
+          description: Not supported; must be omitted or false
+      required:
+      - normLawFirmId
+      - scheduleOptions
+      - scheduleOptions.refreshWindow
+    PutNormlawfirmtrackResponse:
+      type: object
+      properties:
+        NormLawFirmResponse:
+          type: object
+          description: Indicates whether a track was added or updated and includes estimatedTracksPerMonth
+    DeleteNormlawfirmtrackNormlawfirmidResponse:
+      type: object
+      properties:
+        deleteResult:
+          type: object
+          description: Result of the delete operation
+    GetNormlawfirmtrackNormlawfirmidResponse:
+      type: object
+      properties:
+        trackingDetails:
+          type: object
+          description: Details of the tracking schedule and current status
+    GetNormlawfirmtracksResponse:
+      type: object
+      properties:
+        lawFirmList:
+          type: array
+          description: List of tracked law firms with optional filters and pagination
+    PutNormlawfirmupdateRequest:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+          description: The 18‑char identifier of the law firm to refresh.
+        priorityLevel:
+          type: string
+          description: 'Controls processing timeout. Only level5 is supported. Default: level5.'
+        notifyOnDelay:
+          type: boolean
+          description: Not supported for Norm Law Firm Update. If true the request is rejected with 400 INVALID_INPUT.
+      required:
+      - normLawFirmId
+    PutNormlawfirmupdateResponse:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: string
+    GetNormlawfirmupdateNormlawfirmidResponse:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: string
+        timestamps:
+          type: object
+        normLawFirm:
+          type: object
+          description: Present only when status is COMPLETE.
+    GetNormlawfirmupdatesResponse:
+      type: object
+      properties:
+        updates:
+          type: array
+          description: Array of NormLawFirmUpdatePreview objects.
+        pageNumber:
+          type: integer
+        totalPages:
+          type: integer
+    GetPacercaselocatorPartysearchCivilcourtsResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: PCLParty
+        pageNumber:
+          type: integer
+          description: Current page number
+        pacerReceipt:
+          type: object
+          description: Billing receipt details
+        pacerPageInfo:
+          type: object
+          description: Pagination info
+        pacerSearchResultsArray:
+          type: array
+          description: Array of search result objects
+    PutPacercredentialRequest:
+      type: object
+      properties:
+        pacerUserId:
+          type: string
+          description: Your PACER user ID
+        pacerClientCode:
+          type: string
+          description: Your PACER client code
+      required:
+      - pacerUserId
+      - pacerClientCode
+    PutPacercredentialResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseDocumentOrderCallbackId:
+          type: string
+        caseDocumentId:
+          type: string
+        callbackGeneratedDate:
+          type: string
+          description: null until callback is generated
+        status:
+          type: string
+          description: IN_PROGRESS
+        caseDocument:
+          type: object
+          description: null until document is ready
+        caseDocumentOrderCallbackAPI:
+          type: string
+        file:
+          type: object
+          description: null until document is ready
+        exception:
+          type: string
+tags:
+- name: Case
+- name: Casecountanalyticsbycasetype
+- name: Casecountanalyticsbynormattorney
+- name: Casecountanalyticsbynormlawfirm
+- name: Casedocumentorder
+- name: Caseexport
+- name: Caseimport
+- name: Casesearch
+- name: Caseupdate
+- name: Caseupdates
+- name: Masterdata
+- name: Normattorney
+- name: Normattorneytrack
+- name: Normattorneytracks
+- name: Normattorneyupdate
+- name: Normattorneyupdates
+- name: Normlawfirm
+- name: Normlawfirmsearch
+- name: Normlawfirmtrack
+- name: Normlawfirmtracks
+- name: Normlawfirmupdate
+- name: Normlawfirmupdates
+- name: Pacercaselocator
+- name: Pacercredential

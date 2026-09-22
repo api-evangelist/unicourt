@@ -1,0 +1,521 @@
+{
+  "@context": {
+    "@vocab": "https://unicourt.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "unicourt": "https://unicourt.com/schema#",
+    "GetCaseCaseak44001593745AResponse": "unicourt:GetCaseCaseak44001593745AResponse",
+    "object": {
+      "@id": "unicourt:object",
+      "@type": "xsd:string"
+    },
+    "caseId": {
+      "@id": "unicourt:caseId",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "unicourt:url",
+      "@type": "xsd:string"
+    },
+    "caseNumber": {
+      "@id": "unicourt:caseNumber",
+      "@type": "xsd:string"
+    },
+    "caseName": {
+      "@id": "unicourt:caseName",
+      "@type": "xsd:string"
+    },
+    "filedDate": {
+      "@id": "unicourt:filedDate",
+      "@type": "xsd:string"
+    },
+    "hasOnlyMetaInfo": {
+      "@id": "unicourt:hasOnlyMetaInfo",
+      "@type": "xsd:boolean"
+    },
+    "courtServiceStatusId": {
+      "@id": "unicourt:courtServiceStatusId",
+      "@type": "xsd:string"
+    },
+    "courtServiceStatusAPI": {
+      "@id": "unicourt:courtServiceStatusAPI",
+      "@type": "xsd:string"
+    },
+    "court": {
+      "@id": "unicourt:court"
+    },
+    "courtLocation": {
+      "@id": "unicourt:courtLocation"
+    },
+    "caseType": {
+      "@id": "unicourt:caseType"
+    },
+    "chargeArray": {
+      "@id": "unicourt:chargeArray",
+      "@container": "@list"
+    },
+    "caseStatus": {
+      "@id": "unicourt:caseStatus"
+    },
+    "causeOfActionArray": {
+      "@id": "unicourt:causeOfActionArray",
+      "@container": "@list"
+    },
+    "firstFetchDate": {
+      "@id": "unicourt:firstFetchDate",
+      "@type": "xsd:string"
+    },
+    "lastFetchDate": {
+      "@id": "unicourt:lastFetchDate",
+      "@type": "xsd:string"
+    },
+    "lastFetchDateWithUpdates": {
+      "@id": "unicourt:lastFetchDateWithUpdates",
+      "@type": "xsd:string"
+    },
+    "participantsLastFetchDate": {
+      "@id": "unicourt:participantsLastFetchDate",
+      "@type": "xsd:string"
+    },
+    "sourceDataStatus": {
+      "@id": "unicourt:sourceDataStatus",
+      "@type": "xsd:string"
+    },
+    "sourceCaseData": {
+      "@id": "unicourt:sourceCaseData"
+    },
+    "hasDocumentsWithPreview": {
+      "@id": "unicourt:hasDocumentsWithPreview",
+      "@type": "xsd:boolean"
+    },
+    "exportAPI": {
+      "@id": "unicourt:exportAPI",
+      "@type": "xsd:string"
+    },
+    "caseStats": {
+      "@id": "unicourt:caseStats"
+    },
+    "parties": {
+      "@id": "unicourt:parties"
+    },
+    "attorneys": {
+      "@id": "unicourt:attorneys"
+    },
+    "GetCaseCasearb6D8C898B0BaResponse": "unicourt:GetCaseCasearb6D8C898B0BaResponse",
+    "judges": {
+      "@id": "unicourt:judges"
+    },
+    "docketEntries": {
+      "@id": "unicourt:docketEntries"
+    },
+    "GetCaseCasearf7613462Fa75AttorneysResponse": "unicourt:GetCaseCasearf7613462Fa75AttorneysResponse",
+    "pageNumber": {
+      "@id": "unicourt:pageNumber",
+      "@type": "xsd:integer"
+    },
+    "totalCount": {
+      "@id": "unicourt:totalCount",
+      "@type": "xsd:integer"
+    },
+    "totalPages": {
+      "@id": "unicourt:totalPages",
+      "@type": "xsd:integer"
+    },
+    "nextPageAPI": {
+      "@id": "unicourt:nextPageAPI",
+      "@type": "xsd:string"
+    },
+    "attorneyArray": {
+      "@id": "unicourt:attorneyArray",
+      "@container": "@list"
+    },
+    "GetCaseCasearf7613462Fa75HearingsResponse": "unicourt:GetCaseCasearf7613462Fa75HearingsResponse",
+    "hearingArray": {
+      "@id": "unicourt:hearingArray",
+      "@container": "@list"
+    },
+    "GetCaseCasejr6533D15Dc165Response": "unicourt:GetCaseCasejr6533D15Dc165Response",
+    "GetCasecountanalyticsbycasetypeResponse": "unicourt:GetCasecountanalyticsbycasetypeResponse",
+    "previousPageAPI": {
+      "@id": "unicourt:previousPageAPI",
+      "@type": "xsd:string"
+    },
+    "results": {
+      "@id": "unicourt:results",
+      "@container": "@list"
+    },
+    "caseCount": {
+      "@id": "unicourt:caseCount",
+      "@type": "xsd:integer"
+    },
+    "caseSearchAPI": {
+      "@id": "unicourt:caseSearchAPI",
+      "@type": "xsd:string"
+    },
+    "caseType.object": {
+      "@id": "unicourt:caseType.object",
+      "@type": "xsd:string"
+    },
+    "caseType.caseClassId": {
+      "@id": "unicourt:caseType.caseClassId",
+      "@type": "xsd:string"
+    },
+    "caseType.areaOfLawId": {
+      "@id": "unicourt:caseType.areaOfLawId",
+      "@type": "xsd:string"
+    },
+    "caseType.caseTypeGroupId": {
+      "@id": "unicourt:caseType.caseTypeGroupId",
+      "@type": "xsd:string"
+    },
+    "caseType.caseTypeId": {
+      "@id": "unicourt:caseType.caseTypeId",
+      "@type": "xsd:string"
+    },
+    "caseType.caseClass": {
+      "@id": "unicourt:caseType.caseClass",
+      "@type": "xsd:string"
+    },
+    "caseType.areaOfLaw": {
+      "@id": "unicourt:caseType.areaOfLaw",
+      "@type": "xsd:string"
+    },
+    "caseType.caseTypeGroup": {
+      "@id": "unicourt:caseType.caseTypeGroup",
+      "@type": "xsd:string"
+    },
+    "caseType.name": {
+      "@id": "unicourt:caseType.name",
+      "@type": "xsd:string"
+    },
+    "caseType.saliCode": {
+      "@id": "unicourt:caseType.saliCode",
+      "@type": "xsd:string"
+    },
+    "caseType.caseTypeTag": {
+      "@id": "unicourt:caseType.caseTypeTag",
+      "@type": "xsd:string"
+    },
+    "caseType.createdDate": {
+      "@id": "unicourt:caseType.createdDate",
+      "@type": "xsd:string"
+    },
+    "GetCasecountanalyticsbynormattorneyResponse": "unicourt:GetCasecountanalyticsbynormattorneyResponse",
+    "normAttorneyId": {
+      "@id": "unicourt:normAttorneyId",
+      "@type": "xsd:string"
+    },
+    "normAttorneyName": {
+      "@id": "unicourt:normAttorneyName",
+      "@type": "xsd:string"
+    },
+    "totalCaseCount": {
+      "@id": "unicourt:totalCaseCount",
+      "@type": "xsd:integer"
+    },
+    "totalNormAttorneyCount": {
+      "@id": "unicourt:totalNormAttorneyCount",
+      "@type": "xsd:integer"
+    },
+    "GetCasecountanalyticsbynormlawfirmResponse": "unicourt:GetCasecountanalyticsbynormlawfirmResponse",
+    "totalCaseTypeCount": {
+      "@id": "unicourt:totalCaseTypeCount",
+      "@type": "xsd:integer"
+    },
+    "GetCasedocumentorderResponse": "unicourt:GetCasedocumentorderResponse",
+    "caseDocumentOrderCallbackId": {
+      "@id": "unicourt:caseDocumentOrderCallbackId",
+      "@type": "xsd:string"
+    },
+    "caseDocumentId": {
+      "@id": "unicourt:caseDocumentId",
+      "@type": "xsd:string"
+    },
+    "callbackGeneratedDate": {
+      "@id": "unicourt:callbackGeneratedDate",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "unicourt:status",
+      "@type": "xsd:string"
+    },
+    "caseDocument": {
+      "@id": "unicourt:caseDocument"
+    },
+    "caseDocumentOrderCallbackAPI": {
+      "@id": "unicourt:caseDocumentOrderCallbackAPI",
+      "@type": "xsd:string"
+    },
+    "file": {
+      "@id": "unicourt:file"
+    },
+    "exception": {
+      "@id": "unicourt:exception",
+      "@type": "xsd:string"
+    },
+    "GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response": "unicourt:GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response",
+    "GetCasedocumentorderCallbacksCbdobnu64101C97E33Response": "unicourt:GetCasedocumentorderCallbacksCbdobnu64101C97E33Response",
+    "GetCaseexportCasegpea09E0763Db3Response": "unicourt:GetCaseexportCasegpea09E0763Db3Response",
+    "caseExportCallbackId": {
+      "@id": "unicourt:caseExportCallbackId",
+      "@type": "xsd:string"
+    },
+    "caseExportCallbackAPI": {
+      "@id": "unicourt:caseExportCallbackAPI",
+      "@type": "xsd:string"
+    },
+    "GetCaseexportCasepkca0Efb77DfacResponse": "unicourt:GetCaseexportCasepkca0Efb77DfacResponse",
+    "GetCaseexportCallbacksCbce3Sh766729F6024Response": "unicourt:GetCaseexportCallbacksCbce3Sh766729F6024Response",
+    "GetCaseexportCallbacksCbcervh6672B1Cez23Response": "unicourt:GetCaseexportCallbacksCbcervh6672B1Cez23Response",
+    "PutCaseimportRequest": "unicourt:PutCaseimportRequest",
+    "priorityLevel": {
+      "@id": "unicourt:priorityLevel",
+      "@type": "xsd:string"
+    },
+    "notifyOnDelay": {
+      "@id": "unicourt:notifyOnDelay",
+      "@type": "xsd:boolean"
+    },
+    "courtId": {
+      "@id": "unicourt:courtId",
+      "@type": "xsd:string"
+    },
+    "PutCaseimportResponse": "unicourt:PutCaseimportResponse",
+    "caseImportCallbackId": {
+      "@id": "unicourt:caseImportCallbackId",
+      "@type": "xsd:string"
+    },
+    "statusDetails": {
+      "@id": "unicourt:statusDetails"
+    },
+    "GetCaseimportCallbacksResponse": "unicourt:GetCaseimportCallbacksResponse",
+    "pagination": {
+      "@id": "unicourt:pagination"
+    },
+    "callbackArray": {
+      "@id": "unicourt:callbackArray",
+      "@container": "@list"
+    },
+    "GetCaseimportCallbacksCaseimportcallbackidResponse": "unicourt:GetCaseimportCallbacksCaseimportcallbackidResponse",
+    "importedCaseReferences": {
+      "@id": "unicourt:importedCaseReferences",
+      "@container": "@list"
+    },
+    "case": {
+      "@id": "unicourt:case"
+    },
+    "GetCasesearchResponse": "unicourt:GetCasesearchResponse",
+    "PutCaseupdateRequest": "unicourt:PutCaseupdateRequest",
+    "PutCaseupdateResponse": "unicourt:PutCaseupdateResponse",
+    "caseUpdateId": {
+      "@id": "unicourt:caseUpdateId",
+      "@type": "xsd:string"
+    },
+    "GetCaseupdateCaseke15Dba3978Da9Response": "unicourt:GetCaseupdateCaseke15Dba3978Da9Response",
+    "requestedDate": {
+      "@id": "unicourt:requestedDate",
+      "@type": "xsd:string"
+    },
+    "caseAPI": {
+      "@id": "unicourt:caseAPI",
+      "@type": "xsd:string"
+    },
+    "pacerOptions": {
+      "@id": "unicourt:pacerOptions"
+    },
+    "GetCaseupdateCasene32920DcecabeResponse": "unicourt:GetCaseupdateCasene32920DcecabeResponse",
+    "GetCaseupdateCaseidResponse": "unicourt:GetCaseupdateCaseidResponse",
+    "caseObject": {
+      "@id": "unicourt:caseObject"
+    },
+    "GetMasterdataCourtResponse": "unicourt:GetMasterdataCourtResponse",
+    "courtArray": {
+      "@id": "unicourt:courtArray",
+      "@container": "@list"
+    },
+    "GetNormattorneyNatyzny8Exmoe2RwgjResponse": "unicourt:GetNormattorneyNatyzny8Exmoe2RwgjResponse",
+    "confidenceScore": {
+      "@id": "unicourt:confidenceScore",
+      "@type": "xsd:decimal"
+    },
+    "scoreConstituents": {
+      "@id": "unicourt:scoreConstituents"
+    },
+    "associatedNormJudgesAPI": {
+      "@id": "unicourt:associatedNormJudgesAPI",
+      "@type": "xsd:string"
+    },
+    "associatedNormPartiesAPI": {
+      "@id": "unicourt:associatedNormPartiesAPI",
+      "@type": "xsd:string"
+    },
+    "associatedNormLawFirmsAPI": {
+      "@id": "unicourt:associatedNormLawFirmsAPI",
+      "@type": "xsd:string"
+    },
+    "caseCountAnalyticsByNormAttorneyAPI": {
+      "@id": "unicourt:caseCountAnalyticsByNormAttorneyAPI",
+      "@type": "xsd:string"
+    },
+    "caseCountAnalyticsByOpposingNormAttorneyAPI": {
+      "@id": "unicourt:caseCountAnalyticsByOpposingNormAttorneyAPI",
+      "@type": "xsd:string"
+    },
+    "GetNormattorneyNatyppnmw8Ayt8QvjtResponse": "unicourt:GetNormattorneyNatyppnmw8Ayt8QvjtResponse",
+    "name": {
+      "@id": "unicourt:name",
+      "@type": "xsd:string"
+    },
+    "firstName": {
+      "@id": "unicourt:firstName",
+      "@type": "xsd:string"
+    },
+    "middleName": {
+      "@id": "unicourt:middleName",
+      "@type": "xsd:string"
+    },
+    "lastName": {
+      "@id": "unicourt:lastName",
+      "@type": "xsd:string"
+    },
+    "caseAnalyticsAPI": {
+      "@id": "unicourt:caseAnalyticsAPI"
+    },
+    "hasAssociatedPublicData": {
+      "@id": "unicourt:hasAssociatedPublicData",
+      "@type": "xsd:boolean"
+    },
+    "barRecordArray": {
+      "@id": "unicourt:barRecordArray",
+      "@container": "@list"
+    },
+    "GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin": "unicourt:GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin",
+    "PutNormattorneytrackRequest": "unicourt:PutNormattorneytrackRequest",
+    "stateCodeArray": {
+      "@id": "unicourt:stateCodeArray",
+      "@container": "@list"
+    },
+    "scheduleOptions": {
+      "@id": "unicourt:scheduleOptions"
+    },
+    "scheduleOptions.refreshWindow": {
+      "@id": "unicourt:scheduleOptions.refreshWindow",
+      "@type": "xsd:string"
+    },
+    "scheduleOptions.startDate": {
+      "@id": "unicourt:scheduleOptions.startDate",
+      "@type": "xsd:string"
+    },
+    "scheduleOptions.endDate": {
+      "@id": "unicourt:scheduleOptions.endDate",
+      "@type": "xsd:string"
+    },
+    "PutNormattorneytrackResponse": "unicourt:PutNormattorneytrackResponse",
+    "NormAttorneyResponse": {
+      "@id": "unicourt:NormAttorneyResponse"
+    },
+    "DeleteNormattorneytrackNormattorneyidResponse": "unicourt:DeleteNormattorneytrackNormattorneyidResponse",
+    "DeleteResponse": {
+      "@id": "unicourt:DeleteResponse"
+    },
+    "GetNormattorneytrackNormattorneyidResponse": "unicourt:GetNormattorneytrackNormattorneyidResponse",
+    "GetNormattorneytracksResponse": "unicourt:GetNormattorneytracksResponse",
+    "NormAttorneyListResponse": {
+      "@id": "unicourt:NormAttorneyListResponse"
+    },
+    "PutNormattorneyupdateRequest": "unicourt:PutNormattorneyupdateRequest",
+    "PutNormattorneyupdateResponse": "unicourt:PutNormattorneyupdateResponse",
+    "normAttorneyUpdateId": {
+      "@id": "unicourt:normAttorneyUpdateId",
+      "@type": "xsd:string"
+    },
+    "GetNormattorneyupdateNormattorneyidResponse": "unicourt:GetNormattorneyupdateNormattorneyidResponse",
+    "normAttorney": {
+      "@id": "unicourt:normAttorney"
+    },
+    "GetNormattorneyupdatesResponse": "unicourt:GetNormattorneyupdatesResponse",
+    "updates": {
+      "@id": "unicourt:updates",
+      "@container": "@list"
+    },
+    "GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons": "unicourt:GetNormlawfirmNorg5Odekshwqrkv3IAssociatednormpartiesRespons",
+    "associatedNormPartyArray": {
+      "@id": "unicourt:associatedNormPartyArray",
+      "@container": "@list"
+    },
+    "GetNormlawfirmsearchResponse": "unicourt:GetNormlawfirmsearchResponse",
+    "normLawFirmSearchResultArray": {
+      "@id": "unicourt:normLawFirmSearchResultArray",
+      "@container": "@list"
+    },
+    "q": {
+      "@id": "unicourt:q",
+      "@type": "xsd:string"
+    },
+    "normLawFirmSearchId": {
+      "@id": "unicourt:normLawFirmSearchId",
+      "@type": "xsd:string"
+    },
+    "PutNormlawfirmtrackRequest": "unicourt:PutNormlawfirmtrackRequest",
+    "normLawFirmId": {
+      "@id": "unicourt:normLawFirmId",
+      "@type": "xsd:string"
+    },
+    "PutNormlawfirmtrackResponse": "unicourt:PutNormlawfirmtrackResponse",
+    "NormLawFirmResponse": {
+      "@id": "unicourt:NormLawFirmResponse"
+    },
+    "DeleteNormlawfirmtrackNormlawfirmidResponse": "unicourt:DeleteNormlawfirmtrackNormlawfirmidResponse",
+    "deleteResult": {
+      "@id": "unicourt:deleteResult"
+    },
+    "GetNormlawfirmtrackNormlawfirmidResponse": "unicourt:GetNormlawfirmtrackNormlawfirmidResponse",
+    "trackingDetails": {
+      "@id": "unicourt:trackingDetails"
+    },
+    "GetNormlawfirmtracksResponse": "unicourt:GetNormlawfirmtracksResponse",
+    "lawFirmList": {
+      "@id": "unicourt:lawFirmList",
+      "@container": "@list"
+    },
+    "PutNormlawfirmupdateRequest": "unicourt:PutNormlawfirmupdateRequest",
+    "PutNormlawfirmupdateResponse": "unicourt:PutNormlawfirmupdateResponse",
+    "GetNormlawfirmupdateNormlawfirmidResponse": "unicourt:GetNormlawfirmupdateNormlawfirmidResponse",
+    "timestamps": {
+      "@id": "unicourt:timestamps"
+    },
+    "normLawFirm": {
+      "@id": "unicourt:normLawFirm"
+    },
+    "GetNormlawfirmupdatesResponse": "unicourt:GetNormlawfirmupdatesResponse",
+    "GetPacercaselocatorPartysearchCivilcourtsResponse": "unicourt:GetPacercaselocatorPartysearchCivilcourtsResponse",
+    "pacerReceipt": {
+      "@id": "unicourt:pacerReceipt"
+    },
+    "pacerPageInfo": {
+      "@id": "unicourt:pacerPageInfo"
+    },
+    "pacerSearchResultsArray": {
+      "@id": "unicourt:pacerSearchResultsArray",
+      "@container": "@list"
+    },
+    "PutPacercredentialRequest": "unicourt:PutPacercredentialRequest",
+    "pacerUserId": {
+      "@id": "unicourt:pacerUserId",
+      "@type": "xsd:string"
+    },
+    "pacerClientCode": {
+      "@id": "unicourt:pacerClientCode",
+      "@type": "xsd:string"
+    },
+    "PutPacercredentialResponse": "unicourt:PutPacercredentialResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "UniCourt API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects UniCourt's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/_ae-authored/unicourt-openapi-generated.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/unicourt-openapi-generated.yml"
+  ]
+}
