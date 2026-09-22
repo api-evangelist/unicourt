@@ -1,0 +1,24 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.unicourt.com/
+sources:
+- https://docs.unicourt.com/
+- https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases/
+- https://docs.unicourt.com/authentication-and-authorization/
+idempotency:
+  coverage: none
+  evidence: The documentation does not describe any idempotency key or mechanism.
+pagination:
+  style: pageNumber query parameter
+  params:
+  - pageNumber
+  response_fields:
+  - pageNumber
+  - totalPages
+  - totalCount
+  - nextPageAPI
+  - previousPageAPI
+  evidence: Responses include pageNumber, totalPages, totalCount, nextPageAPI, previousPageAPI.
+authentication: Bearer token (JWT) – use the JWT accessToken as the Authorization header value.
+docs: https://docs.unicourt.com/

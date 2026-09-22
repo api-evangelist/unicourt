@@ -1,0 +1,9 @@
+generated: 2026-09-21
+method: none
+deployment:
+  mode: none
+  endpoint: null
+  install: ""
+  package: ""
+  auth: unknown
+  verified: derived

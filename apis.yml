@@ -1,23 +1,86 @@
 aid: unicourt
+
 name: UniCourt
-description: 'UniCourt is a company surfaced via the API Evangelist harvest backlog (source: data) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/68e96a346d8a3699dd3316b1/698113f630e1434ec18db8f1_og-img-logo.jpg
+
+description: UniCourt provides a single platform for accessing litigation data, analytics, and insights. It offers APIs, widgets, and data share
+  solutions that give real-time access to over 2 billion dockets and documents from 4,000+ state and federal courts. Customers can integrate structured
+  litigation data into applications, data warehouses, and experience management systems for better decision‑making and risk assessment.
+
 url: https://raw.githubusercontent.com/api-evangelist/unicourt/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:data
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation is public but no OpenAPI or other machine‑readable spec was found.
+  evidence:
+  - url: https://docs.unicourt.com/authentication-and-authorization
+    status: 200
+  checked: 2026-09-21
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
-- Company
-apis: []
+- LegalTech
+- DataAnalytics
+- Litigation
+- API
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Conventions
+  url: conventions/unicourt-conventions.yml
+- type: DomainSecurity
+  url: security/unicourt-domain-security.yml
 - type: Website
   url: https://unicourt.com/
+- type: DeveloperPortal
+  url: https://app.unicourt.com/login/
+- type: Documentation
+  url: https://docs.unicourt.com/
+- type: APIReference
+  url: https://docs.unicourt.com/
+- type: GettingStarted
+  url: https://docs.unicourt.com/getting-started/welcome-to-unicourt-API
+- type: Support
+  url: https://unicourt.com/contact-us
+- type: Blog
+  url: https://unicourt.com/blog/
+- type: Pricing
+  url: https://unicourt.com/pricing
+- type: SignUp
+  url: https://unicourt.com/signup?p=s00006&li=pc
+- type: TermsOfService
+  url: https://unicourt.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://unicourt.com/privacy-policy
+
+apis:
+- name: UniCourt API
+  description: UniCourt provides litigation data APIs as described in their documentation.
+  humanURL: https://docs.unicourt.com/
+  aid: unicourt:unicourt-api
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
