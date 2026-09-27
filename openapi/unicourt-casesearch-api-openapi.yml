@@ -1,0 +1,106 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Casesearch API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Casesearch
+paths:
+  /caseSearch:
+    get:
+      operationId: get_caseSearch
+      tags:
+      - Casesearch
+      summary: Case Search Request
+      description: Searches for cases using keyword queries and optional sorting and pagination.
+      x-source: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Keyword-based query, e.g., caseName:pfizer
+      - name: sort
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Field to sort by, e.g., filedDate
+      - name: order
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sort order, e.g., desc
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for pagination
+      - name: accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasesearchResponse'
+components:
+  schemas:
+    GetCasesearchResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string

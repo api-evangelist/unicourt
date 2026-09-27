@@ -1,0 +1,213 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Caseupdate API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Caseupdate
+paths:
+  /caseUpdate:
+    put:
+      operationId: put_caseUpdate
+      tags:
+      - Caseupdate
+      summary: Alpha Case Update Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+      parameters:
+      - name: caseId
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 18‑character case identifier
+      - name: priorityLevel
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Controls processing urgency and timeout. Allowed values: level1, level2, level5. Default: level5.'
+      - name: notifyOnDelay
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: 'If true, sends a notification when the request enters the DELAYED state. Default: false.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutCaseupdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutCaseupdateResponse'
+  /caseUpdate/CASEke15dba3978da9:
+    get:
+      operationId: get_caseUpdate_CASEke15dba3978da9
+      tags:
+      - Caseupdate
+      summary: Case Update
+      description: Get Case updates for the requested Case Id.
+      x-source: https://docs.unicourt.com/knowledge-base/case-update
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCaseke15Dba3978Da9Response'
+  /caseUpdate/CASEne32920dcecabe:
+    get:
+      operationId: get_caseUpdate_CASEne32920dcecabe
+      tags:
+      - Caseupdate
+      summary: Case Update
+      description: Get Case updates for the requested Case Id.
+      x-source: https://docs.unicourt.com/knowledge-base/case-update
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCasene32920DcecabeResponse'
+  /caseUpdate/{caseId}:
+    get:
+      operationId: get_caseUpdate_caseId
+      tags:
+      - Caseupdate
+      summary: Alpha Case Update Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+      parameters:
+      - name: caseId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseupdateCaseidResponse'
+components:
+  schemas:
+    PutCaseupdateRequest:
+      type: object
+      properties:
+        caseId:
+          type: string
+          description: 18‑character case identifier
+        priorityLevel:
+          type: string
+          description: 'level1 (Critical), level2 (High), level5 (Normal). Default: level5.'
+        notifyOnDelay:
+          type: boolean
+          description: Whether to send a delay notification.
+      required:
+      - caseId
+    GetCaseupdateCasene32920DcecabeResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        status:
+          type: string
+        requestedDate:
+          type: string
+        caseAPI:
+          type: string
+        pacerOptions:
+          type: object
+          description: Present for PACER cases
+        exception:
+          type: object
+        case:
+          type: object
+    GetCaseupdateCaseke15Dba3978Da9Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        status:
+          type: string
+        requestedDate:
+          type: string
+        caseAPI:
+          type: string
+        pacerOptions:
+          type: object
+          description: Present for PACER cases
+        exception:
+          type: object
+        case:
+          type: object
+    PutCaseupdateResponse:
+      type: object
+      properties:
+        caseUpdateId:
+          type: string
+          description: Identifier for the case update request.
+        status:
+          type: string
+          description: Current status (IN_PROGRESS, DELAYED, COMPLETE, FAILURE).
+        statusDetails:
+          type: object
+          description: Optional object providing issueSource, issueType, statusAsOn, nextRetry, details.
+    GetCaseupdateCaseidResponse:
+      type: object
+      properties:
+        caseId:
+          type: string
+          description: The case identifier.
+        status:
+          type: string
+          description: Current processing status.
+        statusDetails:
+          type: object
+          description: Optional details object (issueSource, issueType, statusAsOn, nextRetry, details).
+        caseObject:
+          type: object
+          description: Full case data when status is COMPLETE.

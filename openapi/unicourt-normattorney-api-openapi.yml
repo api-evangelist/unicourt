@@ -1,0 +1,193 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Normattorney API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Normattorney
+paths:
+  /normAttorney/NATYZnY8Exmoe2rWGJ:
+    get:
+      operationId: get_normAttorney_NATYZnY8Exmoe2rWGJ
+      tags:
+      - Normattorney
+      summary: Normalization
+      description: Retrieve normalized attorney details.
+      x-source: https://docs.unicourt.com/knowledge-base/normalization-docs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyzny8Exmoe2RwgjResponse'
+  /normAttorney/NATYpPnmW8AyT8QvjT:
+    get:
+      operationId: get_normAttorney_NATYpPnmW8AyT8QvjT
+      tags:
+      - Normattorney
+      summary: Locate Hearings
+      description: Retrieves normalized attorney details for the given normalized attorney ID.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyppnmw8Ayt8QvjtResponse'
+  /normAttorney/NATYst9Ko4FSNjbJtH/caseCountAnalyticsByOpposingNormAttorney:
+    get:
+      operationId: get_normAttorney_NATYst9Ko4FSNjbJtH_caseCountAnalyticsByOpposingNormAttorney
+      tags:
+      - Normattorney
+      summary: Case Count Analytics By Opposing Norm Attorney
+      description: Retrieves analytics for attorneys who frequently appear in opposition to the specified attorney.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Lucene query string to filter opposing attorneys
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin'
+components:
+  schemas:
+    GetNormattorneyNatyppnmw8Ayt8QvjtResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "NormAttorney".
+        normAttorneyId:
+          type: string
+          description: Normalized attorney identifier.
+        name:
+          type: string
+          description: Full name of the attorney.
+        firstName:
+          type: string
+          description: First name.
+        middleName:
+          type: string
+          description: Middle name.
+        lastName:
+          type: string
+          description: Last name.
+        caseSearchAPI:
+          type: string
+          description: API URL for case search related to this attorney.
+        caseAnalyticsAPI:
+          type: object
+          description: Object containing various analytics API URLs.
+        hasAssociatedPublicData:
+          type: boolean
+          description: Indicates if public data is associated.
+        barRecordArray:
+          type: array
+          description: Array of bar record objects.
+    GetNormattorneyNatyzny8Exmoe2RwgjResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        normAttorneyId:
+          type: string
+        normAttorneyName:
+          type: string
+        confidenceScore:
+          type: number
+        scoreConstituents:
+          type: object
+        associatedNormJudgesAPI:
+          type: string
+        associatedNormPartiesAPI:
+          type: string
+        associatedNormLawFirmsAPI:
+          type: string
+        caseCountAnalyticsByNormAttorneyAPI:
+          type: string
+        caseCountAnalyticsByOpposingNormAttorneyAPI:
+          type: string
+    GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Response object type
+        results:
+          type: array
+          description: List of opposing attorney analytics
+        normAttorneyId:
+          type: string
+          description: Normalized opposing attorney identifier
+        normAttorneyName:
+          type: string
+          description: Opposing attorney name
+        caseSearchAPI:
+          type: string
+          description: API URL to search cases for this opposing attorney
+        caseCount:
+          type: integer
+          description: Number of cases where they opposed the target attorney
+        nextPageAPI:
+          type: string
+          description: URL for next page
+        previousPageAPI:
+          type: string
+          description: URL for previous page
+        totalPages:
+          type: integer
+          description: Total number of pages
+        totalCaseCount:
+          type: integer
+          description: Total case count across all opposing results
+        totalNormAttorneyCount:
+          type: integer
+          description: Total number of distinct opposing attorneys

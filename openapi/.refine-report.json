@@ -1,0 +1,41 @@
+{
+  "provider": "unicourt",
+  "sources": [
+    "_ae-authored/unicourt-openapi-generated.yml"
+  ],
+  "outputs": [
+    "unicourt-case-api-openapi.yml",
+    "unicourt-casecountanalyticsbycasetype-api-openapi.yml",
+    "unicourt-casecountanalyticsbynormattorney-api-openapi.yml",
+    "unicourt-casecountanalyticsbynormlawfirm-api-openapi.yml",
+    "unicourt-casedocumentorder-api-openapi.yml",
+    "unicourt-caseexport-api-openapi.yml",
+    "unicourt-caseimport-api-openapi.yml",
+    "unicourt-casesearch-api-openapi.yml",
+    "unicourt-caseupdate-api-openapi.yml",
+    "unicourt-caseupdates-api-openapi.yml",
+    "unicourt-masterdata-api-openapi.yml",
+    "unicourt-normattorney-api-openapi.yml",
+    "unicourt-normattorneytrack-api-openapi.yml",
+    "unicourt-normattorneytracks-api-openapi.yml",
+    "unicourt-normattorneyupdate-api-openapi.yml",
+    "unicourt-normattorneyupdates-api-openapi.yml",
+    "unicourt-normlawfirm-api-openapi.yml",
+    "unicourt-normlawfirmsearch-api-openapi.yml",
+    "unicourt-normlawfirmtrack-api-openapi.yml",
+    "unicourt-normlawfirmtracks-api-openapi.yml",
+    "unicourt-normlawfirmupdate-api-openapi.yml",
+    "unicourt-normlawfirmupdates-api-openapi.yml",
+    "unicourt-pacercaselocator-api-openapi.yml",
+    "unicourt-pacercredential-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "unicourt-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+24 apis, 24 total)"
+  ],
+  "skipped": []
+}

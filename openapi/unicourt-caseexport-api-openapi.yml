@@ -1,0 +1,211 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Caseexport API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Caseexport
+paths:
+  /caseExport/CASEgpea09e0763db3:
+    get:
+      operationId: get_caseExport_CASEgpea09e0763db3
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Start an asynchronous export for a PACER case, returning a CaseExportCallback with a callback ID.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCasegpea09E0763Db3Response'
+  /caseExport/CASEpkca0efb77dfac:
+    get:
+      operationId: get_caseExport_CASEpkca0efb77dfac
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve information about the specified case id and start an asynchronous export. Returns a CaseExportCallback object with a caseExportCallbackId.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCasepkca0Efb77DfacResponse'
+  /caseExport/callbacks/CBCE3SH766729f6024:
+    get:
+      operationId: get_caseExport_callbacks_CBCE3SH766729f6024
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve the export callback object, which includes the file URL when the export is complete.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCallbacksCbce3Sh766729F6024Response'
+  /caseExport/callbacks/CBCERvH6672b1cez23:
+    get:
+      operationId: get_caseExport_callbacks_CBCERvH6672b1cez23
+      tags:
+      - Caseexport
+      summary: Case Export
+      description: Retrieve the completed export callback for a PACER case, providing the file URL.
+      x-source: https://docs.unicourt.com/knowledge-base/case-export
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseexportCallbacksCbcervh6672B1Cez23Response'
+components:
+  schemas:
+    GetCaseexportCallbacksCbce3Sh766729F6024Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was exported.
+        callbackGeneratedDate:
+          type: string
+          description: Timestamp when the callback was generated.
+        status:
+          type: string
+          description: Export status, e.g., COMPLETE.
+        caseExportCallbackAPI:
+          type: string
+          description: URL of this callback endpoint.
+        file:
+          type: object
+          description: ExportFile object containing the download link.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCasegpea09E0763Db3Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was requested.
+        callbackGeneratedDate:
+          type: string
+          description: When the callback was generated (null initially).
+        status:
+          type: string
+          description: Export status, e.g., IN_PROGRESS.
+        caseExportCallbackAPI:
+          type: string
+          description: URL to retrieve the callback.
+        file:
+          type: object
+          description: Export file object when complete.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCallbacksCbcervh6672B1Cez23Response:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was exported.
+        callbackGeneratedDate:
+          type: string
+          description: Timestamp when the callback was generated.
+        status:
+          type: string
+          description: Export status, e.g., COMPLETE.
+        caseExportCallbackAPI:
+          type: string
+          description: URL of this callback endpoint.
+        file:
+          type: object
+          description: ExportFile object containing the download link.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCasepkca0Efb77DfacResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was requested.
+        callbackGeneratedDate:
+          type: string
+          description: When the callback was generated (null initially).
+        status:
+          type: string
+          description: Export status, e.g., IN_PROGRESS.
+        caseExportCallbackAPI:
+          type: string
+          description: URL to retrieve the callback.
+        file:
+          type: object
+          description: Export file object when complete.
+        exception:
+          type: object
+          description: Error information if any.

@@ -1,0 +1,146 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Normattorneytrack API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Normattorneytrack
+paths:
+  /normAttorneyTrack:
+    put:
+      operationId: put_normAttorneyTrack
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormattorneytrackRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormattorneytrackResponse'
+  /normAttorneyTrack/{normAttorneyId}:
+    delete:
+      operationId: delete_normAttorneyTrack_normAttorneyId
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      parameters:
+      - name: normAttorneyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteNormattorneytrackNormattorneyidResponse'
+    get:
+      operationId: get_normAttorneyTrack_normAttorneyId
+      tags:
+      - Normattorneytrack
+      summary: Alpha Norm Attorney Track Overview
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+      parameters:
+      - name: normAttorneyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormattorneytrackNormattorneyidResponse'
+components:
+  schemas:
+    DeleteNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        DeleteResponse:
+          type: object
+          description: Result of the delete operation.
+    PutNormattorneytrackRequest:
+      type: object
+      properties:
+        normAttorneyId:
+          type: string
+          description: Identifier of the attorney to track
+        stateCodeArray:
+          type: array
+          description: Required array of state codes indicating where the attorney is barred. Can be empty [] to consider all barred states.
+        scheduleOptions:
+          type: object
+          description: Options for the tracking schedule
+        scheduleOptions.refreshWindow:
+          type: string
+          description: 'Frequency of tracking. Allowed values: 1W, 2W, 1M.'
+        scheduleOptions.startDate:
+          type: string
+          description: Optional start date (YYYY-MM-DD). Must be today or a future date.
+        scheduleOptions.endDate:
+          type: string
+          description: Optional end date (YYYY-MM-DD) to stop tracking after this date.
+        notifyOnDelay:
+          type: boolean
+          description: Ignored for Norm Attorney Track; always treated as false.
+      required:
+      - normAttorneyId
+    PutNormattorneytrackResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Indicates whether a track was added or updated, with estimatedTracksPerMonth based on the selected refresh window.
+    GetNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Tracking details for the specified attorney, including status and schedule information.

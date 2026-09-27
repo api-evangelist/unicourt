@@ -74,27 +74,555 @@ common:
 - type: PrivacyPolicy
   url: https://unicourt.com/privacy-policy
 apis:
-- name: UniCourt API
-  description: UniCourt provides litigation data APIs as described in their documentation.
+- aid: unicourt:unicourt-case-api
+  name: UniCourt Case API
+  description: The Case API from UniCourt — 5 operation(s) for case.
   humanURL: https://docs.unicourt.com/
-  aid: unicourt:unicourt-api
-- aid: unicourt:unicourt-api
-  name: UniCourt API
-  description: 'UniCourt API as documented publicly: 47 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
-
-    not the provider''s own document.'
-  humanURL: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
   baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Case
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/unicourt-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/unicourt-case-api-openapi.yml
   - type: JSONSchema
     url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
   - type: JSONSchema
     url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
   - type: JSONSchema
-    url: json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-casecountanalyticsbycasetype-api
+  name: UniCourt Casecountanalyticsbycasetype API
+  description: >-
+    The Casecountanalyticsbycasetype API from UniCourt — 1 operation(s) for casecountanalyticsbycasetype.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Casecountanalyticsbycasetype
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-casecountanalyticsbycasetype-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-casecountanalyticsbynormattorney-api
+  name: UniCourt Casecountanalyticsbynormattorney API
+  description: >-
+    The Casecountanalyticsbynormattorney API from UniCourt — 1 operation(s) for casecountanalyticsbynormattorney.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Casecountanalyticsbynormattorney
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-casecountanalyticsbynormattorney-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-casecountanalyticsbynormlawfirm-api
+  name: UniCourt Casecountanalyticsbynormlawfirm API
+  description: >-
+    The Casecountanalyticsbynormlawfirm API from UniCourt — 1 operation(s) for casecountanalyticsbynormlawfirm.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Casecountanalyticsbynormlawfirm
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-casecountanalyticsbynormlawfirm-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-casedocumentorder-api
+  name: UniCourt Casedocumentorder API
+  description: The Casedocumentorder API from UniCourt — 3 operation(s) for casedocumentorder.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Casedocumentorder
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-casedocumentorder-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-caseexport-api
+  name: UniCourt Caseexport API
+  description: The Caseexport API from UniCourt — 4 operation(s) for caseexport.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Caseexport
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-caseexport-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-caseimport-api
+  name: UniCourt Caseimport API
+  description: The Caseimport API from UniCourt — 3 operation(s) for caseimport.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Caseimport
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-caseimport-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-casesearch-api
+  name: UniCourt Casesearch API
+  description: The Casesearch API from UniCourt — 1 operation(s) for casesearch.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Casesearch
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-casesearch-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-caseupdate-api
+  name: UniCourt Caseupdate API
+  description: The Caseupdate API from UniCourt — 4 operation(s) for caseupdate.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Caseupdate
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-caseupdate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-caseupdates-api
+  name: UniCourt Caseupdates API
+  description: The Caseupdates API from UniCourt — 1 operation(s) for caseupdates.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Caseupdates
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-caseupdates-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-masterdata-api
+  name: UniCourt Masterdata API
+  description: The Masterdata API from UniCourt — 1 operation(s) for masterdata.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Masterdata
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-masterdata-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normattorney-api
+  name: UniCourt Normattorney API
+  description: The Normattorney API from UniCourt — 3 operation(s) for normattorney.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normattorney
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normattorney-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normattorneytrack-api
+  name: UniCourt Normattorneytrack API
+  description: The Normattorneytrack API from UniCourt — 2 operation(s) for normattorneytrack.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normattorneytrack
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normattorneytrack-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normattorneytracks-api
+  name: UniCourt Normattorneytracks API
+  description: The Normattorneytracks API from UniCourt — 1 operation(s) for normattorneytracks.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normattorneytracks
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normattorneytracks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normattorneyupdate-api
+  name: UniCourt Normattorneyupdate API
+  description: The Normattorneyupdate API from UniCourt — 2 operation(s) for normattorneyupdate.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normattorneyupdate
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normattorneyupdate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normattorneyupdates-api
+  name: UniCourt Normattorneyupdates API
+  description: The Normattorneyupdates API from UniCourt — 1 operation(s) for normattorneyupdates.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normattorneyupdates
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normattorneyupdates-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirm-api
+  name: UniCourt Normlawfirm API
+  description: The Normlawfirm API from UniCourt — 1 operation(s) for normlawfirm.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirm
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirm-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirmsearch-api
+  name: UniCourt Normlawfirmsearch API
+  description: The Normlawfirmsearch API from UniCourt — 1 operation(s) for normlawfirmsearch.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirmsearch
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirmsearch-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirmtrack-api
+  name: UniCourt Normlawfirmtrack API
+  description: The Normlawfirmtrack API from UniCourt — 2 operation(s) for normlawfirmtrack.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirmtrack
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirmtrack-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirmtracks-api
+  name: UniCourt Normlawfirmtracks API
+  description: The Normlawfirmtracks API from UniCourt — 1 operation(s) for normlawfirmtracks.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirmtracks
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirmtracks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirmupdate-api
+  name: UniCourt Normlawfirmupdate API
+  description: The Normlawfirmupdate API from UniCourt — 2 operation(s) for normlawfirmupdate.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirmupdate
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirmupdate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-normlawfirmupdates-api
+  name: UniCourt Normlawfirmupdates API
+  description: The Normlawfirmupdates API from UniCourt — 1 operation(s) for normlawfirmupdates.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Normlawfirmupdates
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-normlawfirmupdates-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-pacercaselocator-api
+  name: UniCourt Pacercaselocator API
+  description: The Pacercaselocator API from UniCourt — 1 operation(s) for pacercaselocator.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Pacercaselocator
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-pacercaselocator-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-put-normattorneytrack-request-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbynormattorney-response-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-normattorney-natyppnmw8-ayt8-qvjt-response-schema.json
+- aid: unicourt:unicourt-pacercredential-api
+  name: UniCourt Pacercredential API
+  description: The Pacercredential API from UniCourt — 2 operation(s) for pacercredential.
+  humanURL: https://docs.unicourt.com/
+  baseURL: https://enterpriseapi.unicourt.com
+  tags:
+  - Pacercredential
+  properties:
+  - type: OpenAPI
+    url: openapi/unicourt-pacercredential-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/unicourt-get-case-caseak44001593745-aresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/unicourt-get-casecountanalyticsbycasetype-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/unicourt-get-normattorney-natyst9-ko4-fsnjbjth-casecountanalyticsbyopposin-schema.json
   - type: JSONSchema
     url: json-schema/unicourt-put-normattorneytrack-request-schema.json
   - type: JSONSchema

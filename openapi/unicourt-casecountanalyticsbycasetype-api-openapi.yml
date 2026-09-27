@@ -1,0 +1,116 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Casecountanalyticsbycasetype API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Casecountanalyticsbycasetype
+paths:
+  /caseCountAnalyticsByCaseType:
+    get:
+      operationId: get_caseCountAnalyticsByCaseType
+      tags:
+      - Casecountanalyticsbycasetype
+      summary: Case Count Analytics By Case Type Request
+      x-source: https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Query containing normLawFirmId
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Page number for paginated results
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCasecountanalyticsbycasetypeResponse'
+components:
+  schemas:
+    GetCasecountanalyticsbycasetypeResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        nextPageAPI:
+          type: string
+        previousPageAPI:
+          type: string
+        results:
+          type: array
+          description: Array of case count analytics per case type
+        caseCount:
+          type: integer
+          description: Number of cases for the case type
+        caseSearchAPI:
+          type: string
+          description: API endpoint to search the cases
+        caseType:
+          type: object
+          description: Details of the case type
+        caseType.object:
+          type: string
+        caseType.caseClassId:
+          type: string
+        caseType.areaOfLawId:
+          type: string
+        caseType.caseTypeGroupId:
+          type: string
+        caseType.caseTypeId:
+          type: string
+        caseType.caseClass:
+          type: string
+        caseType.areaOfLaw:
+          type: string
+        caseType.caseTypeGroup:
+          type: string
+        caseType.name:
+          type: string
+        caseType.saliCode:
+          type: string
+        caseType.caseTypeTag:
+          type: string
+        caseType.createdDate:
+          type: string
+          description: ISO‑8601 timestamp

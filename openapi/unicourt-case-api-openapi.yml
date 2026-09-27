@@ -1,0 +1,327 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Case API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Case
+paths:
+  /case/CASEak44001593745a:
+    get:
+      operationId: get_case_CASEak44001593745a
+      tags:
+      - Case
+      summary: case details Request
+      description: Retrieves detailed information for a specific case.
+      x-source: https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCaseak44001593745AResponse'
+  /case/CASEarb6d8c898b0ba:
+    get:
+      operationId: get_case_CASEarb6d8c898b0ba
+      tags:
+      - Case
+      summary: Normalization
+      description: Retrieve detailed information for a specific case.
+      x-source: https://docs.unicourt.com/knowledge-base/normalization-docs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearb6D8C898B0BaResponse'
+  /case/CASEarf7613462fa75/attorneys:
+    get:
+      operationId: get_case_CASEarf7613462fa75_attorneys
+      tags:
+      - Case
+      summary: Locate Hearings
+      description: Retrieves attorneys associated with the specified case.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      parameters:
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearf7613462Fa75AttorneysResponse'
+  /case/CASEarf7613462fa75/hearings:
+    get:
+      operationId: get_case_CASEarf7613462fa75_hearings
+      tags:
+      - Case
+      summary: Locate Hearings
+      description: Retrieves hearings for the specified case.
+      x-source: https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+      parameters:
+      - name: sortBy
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sorting order, e.g., "latest to oldest".
+      - name: pageNumber
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Page number for pagination.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasearf7613462Fa75HearingsResponse'
+  /case/CASEjr6533d15dc165:
+    get:
+      operationId: get_case_CASEjr6533d15dc165
+      tags:
+      - Case
+      summary: Case Details Request
+      description: Retrieves details for a specific case identified by caseId.
+      x-source: https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+      parameters:
+      - name: accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <Your JWT accessToken>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCaseCasejr6533D15Dc165Response'
+components:
+  schemas:
+    GetCaseCasejr6533D15Dc165Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        url:
+          type: string
+        caseNumber:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+        hasOnlyMetaInfo:
+          type: boolean
+    GetCaseCasearb6D8C898B0BaResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        url:
+          type: string
+        caseNumber:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+        court:
+          type: object
+        courtLocation:
+          type: object
+        caseType:
+          type: object
+        caseStatus:
+          type: object
+        attorneys:
+          type: object
+        judges:
+          type: object
+        docketEntries:
+          type: object
+    GetCaseCaseak44001593745AResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "Case"
+        caseId:
+          type: string
+          description: Case identifier
+        url:
+          type: string
+          description: Public URL for the case
+        caseNumber:
+          type: string
+          description: Case number
+        caseName:
+          type: string
+          description: Case name
+        filedDate:
+          type: string
+          description: Date the case was filed
+        hasOnlyMetaInfo:
+          type: boolean
+          description: Indicates if only meta info is present
+        courtServiceStatusId:
+          type: string
+          description: Court service status identifier
+        courtServiceStatusAPI:
+          type: string
+          description: API endpoint for court service status
+        court:
+          type: object
+          description: Court details object
+        courtLocation:
+          type: object
+          description: Court location details
+        caseType:
+          type: object
+          description: Case type details
+        chargeArray:
+          type: array
+          description: Array of charges
+        caseStatus:
+          type: object
+          description: Case status details
+        causeOfActionArray:
+          type: array
+          description: Array of causes of action
+        firstFetchDate:
+          type: string
+          description: First fetch timestamp
+        lastFetchDate:
+          type: string
+          description: Last fetch timestamp
+        lastFetchDateWithUpdates:
+          type: string
+          description: Last fetch with updates timestamp
+        participantsLastFetchDate:
+          type: string
+          description: Participants last fetch timestamp
+        sourceDataStatus:
+          type: string
+          description: Source data status
+        sourceCaseData:
+          type: object
+          description: Source case data object
+        hasDocumentsWithPreview:
+          type: boolean
+          description: Whether documents have preview
+        exportAPI:
+          type: string
+          description: API endpoint for case export
+        caseStats:
+          type: object
+          description: Statistics about the case
+        parties:
+          type: object
+          description: Parties involved in the case
+        attorneys:
+          type: object
+          description: Attorneys involved in the case
+    GetCaseCasearf7613462Fa75HearingsResponse:
+      type: object
+      properties:
+        hearingArray:
+          type: array
+          description: Array of hearing objects.
+        object:
+          type: string
+          description: Always "Hearings".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of hearings.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
+          type: string
+          description: URL for the next page (if any).
+    GetCaseCasearf7613462Fa75AttorneysResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "Attorneys".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of attorneys.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
+          type: string
+          description: URL for the next page (if any).
+        attorneyArray:
+          type: array
+          description: Array of attorney objects.

@@ -1,0 +1,120 @@
+openapi: 3.2.0
+info:
+  title: UniCourt Normlawfirmupdate API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 47 operation(s) read from 24 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; UniCourt has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.unicourt.com/getting-started/structure-of-requests-and-responses
+  - https://docs.unicourt.com/getting-started/quickstart-view-and-track-cases
+  - https://docs.unicourt.com/authentication-and-authorization/config-your-api-settings
+  - https://docs.unicourt.com/knowledge-base/document-orders
+  - https://docs.unicourt.com/knowledge-base/case-update
+  - https://docs.unicourt.com/knowledge-base/case-export
+  - https://docs.unicourt.com/knowledge-base/normalization-docs
+  - https://docs.unicourt.com/knowledge-base/pacer-api
+  - https://docs.unicourt.com/knowledge-base/handling-requests-callbacks
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmtrack
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/get-hearings
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseimport
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-caseupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneyupdate
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-attorneytrack
+  - https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/identify-top-casstype-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/market-share-analysis
+  - https://docs.unicourt.com/use-cases-tutorials/business-intelligence/top-attorneys
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-by-captiontext
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-filed-last30days
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-partyname-role
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-lawfirm
+  - https://docs.unicourt.com/use-cases-tutorials/standard-usecase/locate-cases-involving-product-liability
+servers:
+- url: https://enterpriseapi.unicourt.com
+tags:
+- name: Normlawfirmupdate
+paths:
+  /normLawFirmUpdate:
+    put:
+      operationId: put_normLawFirmUpdate
+      tags:
+      - Normlawfirmupdate
+      summary: Submits a new law firm refresh request
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutNormlawfirmupdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutNormlawfirmupdateResponse'
+  /normLawFirmUpdate/{normLawFirmId}:
+    get:
+      operationId: get_normLawFirmUpdate_normLawFirmId
+      tags:
+      - Normlawfirmupdate
+      summary: Fetches a NormLawFirmUpdate object for a specific 18-char normLawFirmId…
+      x-source: https://docs.unicourt.com/knowledge-base/kb-alpha/alpha-lawfirmupdate
+      parameters:
+      - name: normLawFirmId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNormlawfirmupdateNormlawfirmidResponse'
+components:
+  schemas:
+    PutNormlawfirmupdateRequest:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+          description: The 18‑char identifier of the law firm to refresh.
+        priorityLevel:
+          type: string
+          description: 'Controls processing timeout. Only level5 is supported. Default: level5.'
+        notifyOnDelay:
+          type: boolean
+          description: Not supported for Norm Law Firm Update. If true the request is rejected with 400 INVALID_INPUT.
+      required:
+      - normLawFirmId
+    PutNormlawfirmupdateResponse:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: string
+    GetNormlawfirmupdateNormlawfirmidResponse:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: string
+        timestamps:
+          type: object
+        normLawFirm:
+          type: object
+          description: Present only when status is COMPLETE.
