@@ -105,6 +105,28 @@ components:
           type: object
         exception:
           type: string
+    GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseDocumentOrderCallbackId:
+          type: string
+        caseDocumentId:
+          type: string
+        callbackGeneratedDate:
+          type: string
+        status:
+          type: string
+          description: COMPLETE
+        caseDocument:
+          type: object
+        caseDocumentOrderCallbackAPI:
+          type: string
+        file:
+          type: object
+        exception:
+          type: string
     GetCasedocumentorderResponse:
       type: object
       properties:
@@ -128,27 +150,5 @@ components:
         file:
           type: object
           description: null until document is ready
-        exception:
-          type: string
-    GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response:
-      type: object
-      properties:
-        object:
-          type: string
-        caseDocumentOrderCallbackId:
-          type: string
-        caseDocumentId:
-          type: string
-        callbackGeneratedDate:
-          type: string
-        status:
-          type: string
-          description: COMPLETE
-        caseDocument:
-          type: object
-        caseDocumentOrderCallbackAPI:
-          type: string
-        file:
-          type: object
         exception:
           type: string

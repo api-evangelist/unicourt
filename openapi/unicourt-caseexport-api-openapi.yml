@@ -101,7 +101,7 @@ paths:
                 $ref: '#/components/schemas/GetCaseexportCallbacksCbcervh6672B1Cez23Response'
 components:
   schemas:
-    GetCaseexportCallbacksCbce3Sh766729F6024Response:
+    GetCaseexportCallbacksCbcervh6672B1Cez23Response:
       type: object
       properties:
         object:
@@ -155,7 +155,7 @@ components:
         exception:
           type: object
           description: Error information if any.
-    GetCaseexportCallbacksCbcervh6672B1Cez23Response:
+    GetCaseexportCallbacksCbce3Sh766729F6024Response:
       type: object
       properties:
         object:

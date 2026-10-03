@@ -160,14 +160,19 @@ components:
           type: string
         statusDetails:
           type: object
-    GetCaseimportCallbacksResponse:
+    PutCaseimportRequest:
       type: object
       properties:
-        pagination:
-          type: object
-        callbackArray:
-          type: array
-          description: Array of CaseImportCallback items.
+        caseNumber:
+          type: string
+        priorityLevel:
+          type: string
+        notifyOnDelay:
+          type: boolean
+        courtId:
+          type: string
+      required:
+      - caseNumber
     GetCaseimportCallbacksCaseimportcallbackidResponse:
       type: object
       properties:
@@ -182,16 +187,11 @@ components:
         case:
           type: object
           description: Full case object included when status is COMPLETE.
-    PutCaseimportRequest:
+    GetCaseimportCallbacksResponse:
       type: object
       properties:
-        caseNumber:
-          type: string
-        priorityLevel:
-          type: string
-        notifyOnDelay:
-          type: boolean
-        courtId:
-          type: string
-      required:
-      - caseNumber
+        pagination:
+          type: object
+        callbackArray:
+          type: array
+          description: Array of CaseImportCallback items.

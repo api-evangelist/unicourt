@@ -144,6 +144,33 @@ components:
           description: Whether to send a delay notification.
       required:
       - caseId
+    GetCaseupdateCaseidResponse:
+      type: object
+      properties:
+        caseId:
+          type: string
+          description: The case identifier.
+        status:
+          type: string
+          description: Current processing status.
+        statusDetails:
+          type: object
+          description: Optional details object (issueSource, issueType, statusAsOn, nextRetry, details).
+        caseObject:
+          type: object
+          description: Full case data when status is COMPLETE.
+    PutCaseupdateResponse:
+      type: object
+      properties:
+        caseUpdateId:
+          type: string
+          description: Identifier for the case update request.
+        status:
+          type: string
+          description: Current status (IN_PROGRESS, DELAYED, COMPLETE, FAILURE).
+        statusDetails:
+          type: object
+          description: Optional object providing issueSource, issueType, statusAsOn, nextRetry, details.
     GetCaseupdateCasene32920DcecabeResponse:
       type: object
       properties:
@@ -184,30 +211,3 @@ components:
           type: object
         case:
           type: object
-    PutCaseupdateResponse:
-      type: object
-      properties:
-        caseUpdateId:
-          type: string
-          description: Identifier for the case update request.
-        status:
-          type: string
-          description: Current status (IN_PROGRESS, DELAYED, COMPLETE, FAILURE).
-        statusDetails:
-          type: object
-          description: Optional object providing issueSource, issueType, statusAsOn, nextRetry, details.
-    GetCaseupdateCaseidResponse:
-      type: object
-      properties:
-        caseId:
-          type: string
-          description: The case identifier.
-        status:
-          type: string
-          description: Current processing status.
-        statusDetails:
-          type: object
-          description: Optional details object (issueSource, issueType, statusAsOn, nextRetry, details).
-        caseObject:
-          type: object
-          description: Full case data when status is COMPLETE.

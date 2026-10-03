@@ -35,7 +35,32 @@
   "notes": [
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "unicourt-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+24 apis, 24 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "unicourt-case-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-casecountanalyticsbycasetype-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-casecountanalyticsbynormattorney-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-casecountanalyticsbynormlawfirm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-casedocumentorder-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-caseexport-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-caseimport-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-casesearch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-caseupdate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-caseupdates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-masterdata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normattorney-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normattorneytrack-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normattorneytracks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normattorneyupdate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normattorneyupdates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirmsearch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirmtrack-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirmtracks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirmupdate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-normlawfirmupdates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-pacercaselocator-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "unicourt-pacercredential-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

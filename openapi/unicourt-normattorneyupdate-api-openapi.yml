@@ -83,6 +83,21 @@ paths:
                 $ref: '#/components/schemas/GetNormattorneyupdateNormattorneyidResponse'
 components:
   schemas:
+    GetNormattorneyupdateNormattorneyidResponse:
+      type: object
+      properties:
+        normAttorneyUpdateId:
+          type: string
+          description: Identifier of the update request.
+        status:
+          type: string
+          description: Current processing status.
+        statusDetails:
+          type: string
+          description: Always null for this endpoint.
+        normAttorney:
+          type: object
+          description: Full NormAttorney object when status is COMPLETE.
     PutNormattorneyupdateResponse:
       type: object
       properties:
@@ -113,18 +128,3 @@ components:
       required:
       - normAttorneyId
       - stateCodeArray
-    GetNormattorneyupdateNormattorneyidResponse:
-      type: object
-      properties:
-        normAttorneyUpdateId:
-          type: string
-          description: Identifier of the update request.
-        status:
-          type: string
-          description: Current processing status.
-        statusDetails:
-          type: string
-          description: Always null for this endpoint.
-        normAttorney:
-          type: object
-          description: Full NormAttorney object when status is COMPLETE.

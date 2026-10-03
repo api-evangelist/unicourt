@@ -100,6 +100,18 @@ paths:
                 $ref: '#/components/schemas/GetNormlawfirmtrackNormlawfirmidResponse'
 components:
   schemas:
+    DeleteNormlawfirmtrackNormlawfirmidResponse:
+      type: object
+      properties:
+        deleteResult:
+          type: object
+          description: Result of the delete operation
+    PutNormlawfirmtrackResponse:
+      type: object
+      properties:
+        NormLawFirmResponse:
+          type: object
+          description: Indicates whether a track was added or updated and includes estimatedTracksPerMonth
     PutNormlawfirmtrackRequest:
       type: object
       properties:
@@ -125,21 +137,9 @@ components:
       - normLawFirmId
       - scheduleOptions
       - scheduleOptions.refreshWindow
-    PutNormlawfirmtrackResponse:
-      type: object
-      properties:
-        NormLawFirmResponse:
-          type: object
-          description: Indicates whether a track was added or updated and includes estimatedTracksPerMonth
     GetNormlawfirmtrackNormlawfirmidResponse:
       type: object
       properties:
         trackingDetails:
           type: object
           description: Details of the tracking schedule and current status
-    DeleteNormlawfirmtrackNormlawfirmidResponse:
-      type: object
-      properties:
-        deleteResult:
-          type: object
-          description: Result of the delete operation
