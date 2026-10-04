@@ -95,15 +95,6 @@ components:
           description: Not supported for Norm Law Firm Update. If true the request is rejected with 400 INVALID_INPUT.
       required:
       - normLawFirmId
-    PutNormlawfirmupdateResponse:
-      type: object
-      properties:
-        normLawFirmId:
-          type: string
-        status:
-          type: string
-        statusDetails:
-          type: string
     GetNormlawfirmupdateNormlawfirmidResponse:
       type: object
       properties:
@@ -118,3 +109,12 @@ components:
         normLawFirm:
           type: object
           description: Present only when status is COMPLETE.
+    PutNormlawfirmupdateResponse:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+        status:
+          type: string
+        statusDetails:
+          type: string

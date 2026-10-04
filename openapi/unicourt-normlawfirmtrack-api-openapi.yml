@@ -100,6 +100,12 @@ paths:
                 $ref: '#/components/schemas/GetNormlawfirmtrackNormlawfirmidResponse'
 components:
   schemas:
+    GetNormlawfirmtrackNormlawfirmidResponse:
+      type: object
+      properties:
+        trackingDetails:
+          type: object
+          description: Details of the tracking schedule and current status
     DeleteNormlawfirmtrackNormlawfirmidResponse:
       type: object
       properties:
@@ -137,9 +143,3 @@ components:
       - normLawFirmId
       - scheduleOptions
       - scheduleOptions.refreshWindow
-    GetNormlawfirmtrackNormlawfirmidResponse:
-      type: object
-      properties:
-        trackingDetails:
-          type: object
-          description: Details of the tracking schedule and current status

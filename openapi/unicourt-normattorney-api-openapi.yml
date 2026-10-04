@@ -99,62 +99,6 @@ paths:
                 $ref: '#/components/schemas/GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin'
 components:
   schemas:
-    GetNormattorneyNatyppnmw8Ayt8QvjtResponse:
-      type: object
-      properties:
-        object:
-          type: string
-          description: Always "NormAttorney".
-        normAttorneyId:
-          type: string
-          description: Normalized attorney identifier.
-        name:
-          type: string
-          description: Full name of the attorney.
-        firstName:
-          type: string
-          description: First name.
-        middleName:
-          type: string
-          description: Middle name.
-        lastName:
-          type: string
-          description: Last name.
-        caseSearchAPI:
-          type: string
-          description: API URL for case search related to this attorney.
-        caseAnalyticsAPI:
-          type: object
-          description: Object containing various analytics API URLs.
-        hasAssociatedPublicData:
-          type: boolean
-          description: Indicates if public data is associated.
-        barRecordArray:
-          type: array
-          description: Array of bar record objects.
-    GetNormattorneyNatyzny8Exmoe2RwgjResponse:
-      type: object
-      properties:
-        object:
-          type: string
-        normAttorneyId:
-          type: string
-        normAttorneyName:
-          type: string
-        confidenceScore:
-          type: number
-        scoreConstituents:
-          type: object
-        associatedNormJudgesAPI:
-          type: string
-        associatedNormPartiesAPI:
-          type: string
-        associatedNormLawFirmsAPI:
-          type: string
-        caseCountAnalyticsByNormAttorneyAPI:
-          type: string
-        caseCountAnalyticsByOpposingNormAttorneyAPI:
-          type: string
     GetNormattorneyNatyst9Ko4FsnjbjthCasecountanalyticsbyopposin:
       type: object
       properties:
@@ -191,3 +135,59 @@ components:
         totalNormAttorneyCount:
           type: integer
           description: Total number of distinct opposing attorneys
+    GetNormattorneyNatyzny8Exmoe2RwgjResponse:
+      type: object
+      properties:
+        object:
+          type: string
+        normAttorneyId:
+          type: string
+        normAttorneyName:
+          type: string
+        confidenceScore:
+          type: number
+        scoreConstituents:
+          type: object
+        associatedNormJudgesAPI:
+          type: string
+        associatedNormPartiesAPI:
+          type: string
+        associatedNormLawFirmsAPI:
+          type: string
+        caseCountAnalyticsByNormAttorneyAPI:
+          type: string
+        caseCountAnalyticsByOpposingNormAttorneyAPI:
+          type: string
+    GetNormattorneyNatyppnmw8Ayt8QvjtResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "NormAttorney".
+        normAttorneyId:
+          type: string
+          description: Normalized attorney identifier.
+        name:
+          type: string
+          description: Full name of the attorney.
+        firstName:
+          type: string
+          description: First name.
+        middleName:
+          type: string
+          description: Middle name.
+        lastName:
+          type: string
+          description: Last name.
+        caseSearchAPI:
+          type: string
+          description: API URL for case search related to this attorney.
+        caseAnalyticsAPI:
+          type: object
+          description: Object containing various analytics API URLs.
+        hasAssociatedPublicData:
+          type: boolean
+          description: Indicates if public data is associated.
+        barRecordArray:
+          type: array
+          description: Array of bar record objects.

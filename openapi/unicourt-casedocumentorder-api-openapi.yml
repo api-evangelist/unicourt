@@ -83,7 +83,7 @@ paths:
                 $ref: '#/components/schemas/GetCasedocumentorderCallbacksCbdobnu64101C97E33Response'
 components:
   schemas:
-    GetCasedocumentorderCallbacksCbdobnu64101C97E33Response:
+    GetCasedocumentorderResponse:
       type: object
       properties:
         object:
@@ -94,15 +94,18 @@ components:
           type: string
         callbackGeneratedDate:
           type: string
+          description: null until callback is generated
         status:
           type: string
-          description: COMPLETE
+          description: IN_PROGRESS
         caseDocument:
           type: object
+          description: null until document is ready
         caseDocumentOrderCallbackAPI:
           type: string
         file:
           type: object
+          description: null until document is ready
         exception:
           type: string
     GetCasedocumentorderCallbacksCbdo6373383Fkw0Kd0Response:
@@ -127,7 +130,7 @@ components:
           type: object
         exception:
           type: string
-    GetCasedocumentorderResponse:
+    GetCasedocumentorderCallbacksCbdobnu64101C97E33Response:
       type: object
       properties:
         object:
@@ -138,17 +141,14 @@ components:
           type: string
         callbackGeneratedDate:
           type: string
-          description: null until callback is generated
         status:
           type: string
-          description: IN_PROGRESS
+          description: COMPLETE
         caseDocument:
           type: object
-          description: null until document is ready
         caseDocumentOrderCallbackAPI:
           type: string
         file:
           type: object
-          description: null until document is ready
         exception:
           type: string

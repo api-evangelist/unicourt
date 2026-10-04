@@ -100,12 +100,6 @@ paths:
                 $ref: '#/components/schemas/GetNormattorneytrackNormattorneyidResponse'
 components:
   schemas:
-    GetNormattorneytrackNormattorneyidResponse:
-      type: object
-      properties:
-        NormAttorneyResponse:
-          type: object
-          description: Tracking details for the specified attorney, including status and schedule information.
     PutNormattorneytrackRequest:
       type: object
       properties:
@@ -132,15 +126,21 @@ components:
           description: Ignored for Norm Attorney Track; always treated as false.
       required:
       - normAttorneyId
-    PutNormattorneytrackResponse:
-      type: object
-      properties:
-        NormAttorneyResponse:
-          type: object
-          description: Indicates whether a track was added or updated, with estimatedTracksPerMonth based on the selected refresh window.
     DeleteNormattorneytrackNormattorneyidResponse:
       type: object
       properties:
         DeleteResponse:
           type: object
           description: Result of the delete operation.
+    GetNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Tracking details for the specified attorney, including status and schedule information.
+    PutNormattorneytrackResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Indicates whether a track was added or updated, with estimatedTracksPerMonth based on the selected refresh window.

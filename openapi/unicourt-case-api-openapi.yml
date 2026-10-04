@@ -156,48 +156,6 @@ paths:
                 $ref: '#/components/schemas/GetCaseCasejr6533D15Dc165Response'
 components:
   schemas:
-    GetCaseCasearf7613462Fa75HearingsResponse:
-      type: object
-      properties:
-        hearingArray:
-          type: array
-          description: Array of hearing objects.
-        object:
-          type: string
-          description: Always "Hearings".
-        pageNumber:
-          type: integer
-          description: Current page number.
-        totalCount:
-          type: integer
-          description: Total number of hearings.
-        totalPages:
-          type: integer
-          description: Total pages of results.
-        nextPageAPI:
-          type: string
-          description: URL for the next page (if any).
-    GetCaseCasearf7613462Fa75AttorneysResponse:
-      type: object
-      properties:
-        object:
-          type: string
-          description: Always "Attorneys".
-        pageNumber:
-          type: integer
-          description: Current page number.
-        totalCount:
-          type: integer
-          description: Total number of attorneys.
-        totalPages:
-          type: integer
-          description: Total pages of results.
-        nextPageAPI:
-          type: string
-          description: URL for the next page (if any).
-        attorneyArray:
-          type: array
-          description: Array of attorney objects.
     GetCaseCasearb6D8C898B0BaResponse:
       type: object
       properties:
@@ -227,6 +185,23 @@ components:
           type: object
         docketEntries:
           type: object
+    GetCaseCasejr6533D15Dc165Response:
+      type: object
+      properties:
+        object:
+          type: string
+        caseId:
+          type: string
+        url:
+          type: string
+        caseNumber:
+          type: string
+        caseName:
+          type: string
+        filedDate:
+          type: string
+        hasOnlyMetaInfo:
+          type: boolean
     GetCaseCaseak44001593745AResponse:
       type: object
       properties:
@@ -308,20 +283,45 @@ components:
         attorneys:
           type: object
           description: Attorneys involved in the case
-    GetCaseCasejr6533D15Dc165Response:
+    GetCaseCasearf7613462Fa75AttorneysResponse:
       type: object
       properties:
         object:
           type: string
-        caseId:
+          description: Always "Attorneys".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of attorneys.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
           type: string
-        url:
+          description: URL for the next page (if any).
+        attorneyArray:
+          type: array
+          description: Array of attorney objects.
+    GetCaseCasearf7613462Fa75HearingsResponse:
+      type: object
+      properties:
+        hearingArray:
+          type: array
+          description: Array of hearing objects.
+        object:
           type: string
-        caseNumber:
+          description: Always "Hearings".
+        pageNumber:
+          type: integer
+          description: Current page number.
+        totalCount:
+          type: integer
+          description: Total number of hearings.
+        totalPages:
+          type: integer
+          description: Total pages of results.
+        nextPageAPI:
           type: string
-        caseName:
-          type: string
-        filedDate:
-          type: string
-        hasOnlyMetaInfo:
-          type: boolean
+          description: URL for the next page (if any).

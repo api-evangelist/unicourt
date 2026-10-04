@@ -128,7 +128,7 @@ components:
         exception:
           type: object
           description: Error information if any.
-    GetCaseexportCasegpea09E0763Db3Response:
+    GetCaseexportCasepkca0Efb77DfacResponse:
       type: object
       properties:
         object:
@@ -182,7 +182,7 @@ components:
         exception:
           type: object
           description: Error information if any.
-    GetCaseexportCasepkca0Efb77DfacResponse:
+    GetCaseexportCasegpea09E0763Db3Response:
       type: object
       properties:
         object:
