@@ -100,6 +100,12 @@ paths:
                 $ref: '#/components/schemas/GetNormattorneytrackNormattorneyidResponse'
 components:
   schemas:
+    GetNormattorneytrackNormattorneyidResponse:
+      type: object
+      properties:
+        NormAttorneyResponse:
+          type: object
+          description: Tracking details for the specified attorney, including status and schedule information.
     PutNormattorneytrackRequest:
       type: object
       properties:
@@ -132,12 +138,6 @@ components:
         DeleteResponse:
           type: object
           description: Result of the delete operation.
-    GetNormattorneytrackNormattorneyidResponse:
-      type: object
-      properties:
-        NormAttorneyResponse:
-          type: object
-          description: Tracking details for the specified attorney, including status and schedule information.
     PutNormattorneytrackResponse:
       type: object
       properties:

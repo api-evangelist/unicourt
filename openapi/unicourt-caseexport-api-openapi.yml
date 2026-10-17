@@ -128,33 +128,6 @@ components:
         exception:
           type: object
           description: Error information if any.
-    GetCaseexportCasepkca0Efb77DfacResponse:
-      type: object
-      properties:
-        object:
-          type: string
-          description: Always "CaseExportCallback".
-        caseExportCallbackId:
-          type: string
-          description: Identifier for the export callback.
-        caseId:
-          type: string
-          description: The caseId that was requested.
-        callbackGeneratedDate:
-          type: string
-          description: When the callback was generated (null initially).
-        status:
-          type: string
-          description: Export status, e.g., IN_PROGRESS.
-        caseExportCallbackAPI:
-          type: string
-          description: URL to retrieve the callback.
-        file:
-          type: object
-          description: Export file object when complete.
-        exception:
-          type: object
-          description: Error information if any.
     GetCaseexportCallbacksCbce3Sh766729F6024Response:
       type: object
       properties:
@@ -179,6 +152,33 @@ components:
         file:
           type: object
           description: ExportFile object containing the download link.
+        exception:
+          type: object
+          description: Error information if any.
+    GetCaseexportCasepkca0Efb77DfacResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: Always "CaseExportCallback".
+        caseExportCallbackId:
+          type: string
+          description: Identifier for the export callback.
+        caseId:
+          type: string
+          description: The caseId that was requested.
+        callbackGeneratedDate:
+          type: string
+          description: When the callback was generated (null initially).
+        status:
+          type: string
+          description: Export status, e.g., IN_PROGRESS.
+        caseExportCallbackAPI:
+          type: string
+          description: URL to retrieve the callback.
+        file:
+          type: object
+          description: Export file object when complete.
         exception:
           type: object
           description: Error information if any.

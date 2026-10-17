@@ -81,20 +81,6 @@ paths:
                 $ref: '#/components/schemas/GetNormlawfirmupdateNormlawfirmidResponse'
 components:
   schemas:
-    PutNormlawfirmupdateRequest:
-      type: object
-      properties:
-        normLawFirmId:
-          type: string
-          description: The 18‑char identifier of the law firm to refresh.
-        priorityLevel:
-          type: string
-          description: 'Controls processing timeout. Only level5 is supported. Default: level5.'
-        notifyOnDelay:
-          type: boolean
-          description: Not supported for Norm Law Firm Update. If true the request is rejected with 400 INVALID_INPUT.
-      required:
-      - normLawFirmId
     GetNormlawfirmupdateNormlawfirmidResponse:
       type: object
       properties:
@@ -118,3 +104,17 @@ components:
           type: string
         statusDetails:
           type: string
+    PutNormlawfirmupdateRequest:
+      type: object
+      properties:
+        normLawFirmId:
+          type: string
+          description: The 18‑char identifier of the law firm to refresh.
+        priorityLevel:
+          type: string
+          description: 'Controls processing timeout. Only level5 is supported. Default: level5.'
+        notifyOnDelay:
+          type: boolean
+          description: Not supported for Norm Law Firm Update. If true the request is rejected with 400 INVALID_INPUT.
+      required:
+      - normLawFirmId

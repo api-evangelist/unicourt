@@ -151,6 +151,19 @@ paths:
                 $ref: '#/components/schemas/GetCaseimportCallbacksCaseimportcallbackidResponse'
 components:
   schemas:
+    PutCaseimportRequest:
+      type: object
+      properties:
+        caseNumber:
+          type: string
+        priorityLevel:
+          type: string
+        notifyOnDelay:
+          type: boolean
+        courtId:
+          type: string
+      required:
+      - caseNumber
     GetCaseimportCallbacksCaseimportcallbackidResponse:
       type: object
       properties:
@@ -182,16 +195,3 @@ components:
         callbackArray:
           type: array
           description: Array of CaseImportCallback items.
-    PutCaseimportRequest:
-      type: object
-      properties:
-        caseNumber:
-          type: string
-        priorityLevel:
-          type: string
-        notifyOnDelay:
-          type: boolean
-        courtId:
-          type: string
-      required:
-      - caseNumber
