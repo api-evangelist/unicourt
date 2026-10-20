@@ -1,0 +1,36 @@
+edges:
+- partner_name: Databricks Marketplace
+  partner: databricks
+  partner_match: aggregator
+  type: marketplace
+  marketplace: databricks-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://marketplace.databricks.com/provider/577c526f-dbd0-425a-b5cf-850da41daf30
+  category: data product listing
+  contract_reference:
+    register: Databricks Marketplace (marketplace.databricks.com/api/2.0/public-marketplace-providers + public-marketplace-listings)
+    spec_file: null
+    role: data-marketplace-seller
+    registered_name: UniCourt
+    matched_domain: unicourt.com
+    matched_by: domain
+    listings: 5
+    sample_listings:
+    - SAMPLE UniCourt Attorney Data API - USA Attorney Data matched to Court Records (AI Normalized)
+    - SAMPLE UniCourt Court Data API - USA Court Records (AI Normalized)
+    - SAMPLE UniCourt Judge Data API - USA Judges in State and Federal Courts (AI Normalized)
+    - SAMPLE UniCourt Law Firm & Litigation Data API - USA Legal Data on Law Firms (AI Normalized)
+    - SAMPLE UniCourt Legal Analytics & Litigation Data AP - USA Legal Data (AI Normalized)
+    signal_note: 'participation: the provider lists data products on this marketplace; counts are context'
+    detected_by: sweep-data-marketplaces.py
+    detected: '2026-10-20'
+  detected_by: sweep-data-marketplaces.py
+  detected: '2026-10-20'
+generated: '2026-10-20'
+method: searched
+source:
+- https://marketplace.databricks.com/
+checked:
+- https://marketplace.databricks.com/
